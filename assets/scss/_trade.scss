@@ -1,0 +1,158 @@
+.trade{
+    background: linear-gradient(270deg, rgba(34, 31, 32, 0.00) 0%, rgba(34, 31, 32, 0.50) 31.93%, #221F20 100%),
+    url("../images/trade_banner.png");
+    // height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &_main{
+        padding-top: 34px;
+        padding-bottom: 34px;
+    }
+    &_title{
+        margin-bottom: 15px;
+        h2{
+            color: #FFF;
+            font-family: "Open Sans";
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+    }
+    &_text{
+        margin-bottom: 39px;
+        p{
+            color: #FFF;
+            font-family: "Open Sans";
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 29px;
+            span{
+                font-weight: 700;
+            }
+        }
+    }
+    &_list{
+        margin-bottom: 39px;
+        li{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #FFF;
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 111.111% */
+            margin-bottom: 9px;
+        }
+    }
+   &_formInfo{
+        max-width: 430px;
+        // margin-bottom: 15px;
+        input{
+            width: 100%;
+            border-radius: 26px;
+            border: 1px solid #FFF;
+            background-color: transparent;
+            padding: 15px 20px;
+            margin-bottom: 18px;
+            outline: none;
+            color: #FFF;
+            opacity: .5;
+            font-family: "Open Sans";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150.7%; /* 22.605px */
+            &::placeholder{
+                color: #FFF;
+                font-family: "Open Sans";
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150.7%; /* 22.605px */
+            }
+            &:focus{
+                opacity: 1;
+            }
+        }
+   }
+    
+    &_button{
+        margin-bottom: 9px;
+        a{
+            border-radius: 26px;
+            background: #FF8743;
+            padding: 16px 101px;
+            color: #FFF;
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            // text-transform: lowercase;
+            transition: all .3s ease;
+            &:hover{
+                background-color: #f86a19;
+            }
+        }
+    }
+    &_checkbox{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        label{
+            color: #F7FCFB;
+            font-family: "Open Sans";
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        a{
+            color: #F7FCFB;
+            font-family: "Open Sans";
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: none;
+            text-decoration-thickness: auto;
+            text-underline-offset: auto;
+            text-underline-position: from-font;
+        }
+        input {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 14px;
+            height: 13px;
+            border: 1.5px solid #fff;
+            background-color: transparent;
+            border-radius: 3px;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+          }
+        
+          input:checked::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 8px;
+            height: 4.5px;
+            transform: translate(-50%, -50%);
+            background-image: url('../images/checkbox-check.svg'); /* <- BU YERDA O‘ZINGIZ XOHlAGAN RASM URL sini qo‘ying */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+    }
+}
