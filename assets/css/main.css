@@ -373,9 +373,130 @@ ul {
   background-color: #f86a19;
 }
 
+<<<<<<< HEAD
 .models {
   margin-bottom: 40px;
 }
+=======
+<<<<<<< HEAD
+.trade {
+  background: linear-gradient(270deg, rgba(34, 31, 32, 0) 0%, rgba(34, 31, 32, 0.5) 31.93%, #221F20 100%), url("../images/trade_banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.trade_main {
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+.trade_title {
+  margin-bottom: 15px;
+}
+.trade_title h2 {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.trade_text {
+  margin-bottom: 39px;
+}
+.trade_text p {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 29px;
+}
+.trade_text p span {
+  font-weight: 700;
+}
+.trade_list {
+  margin-bottom: 39px;
+}
+.trade_list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 111.111% */
+  margin-bottom: 9px;
+}
+.trade_formInfo {
+  max-width: 430px;
+}
+.trade_formInfo input {
+  width: 100%;
+  border-radius: 26px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+  padding: 15px 20px;
+  margin-bottom: 18px;
+  outline: none;
+  color: #FFF;
+  opacity: 0.5;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.7%; /* 22.605px */
+}
+.trade_formInfo input::placeholder {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.7%; /* 22.605px */
+}
+.trade_formInfo input:focus {
+  opacity: 1;
+}
+.trade_button {
+  margin-bottom: 9px;
+}
+.trade_button a {
+  border-radius: 26px;
+  background: #FF8743;
+  padding: 16px 101px;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: all 0.3s ease;
+}
+.trade_button a:hover {
+  background-color: #f86a19;
+}
+.trade_checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.trade_checkbox label {
+  color: #F7FCFB;
+  font-family: "Open Sans";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.trade_checkbox a {
+  color: #F7FCFB;
+  font-family: "Open Sans";
+  font-size: 10px;
+=======
+>>>>>>> 6e47fe2bd6c09c5d1067d00594fb35b98e4324be
 .models h2 {
   text-align: center;
   color: #4C5865;
@@ -704,11 +825,19 @@ ul {
   color: #FFF;
   font-family: "Open Sans";
   font-size: 18px;
+>>>>>>> ffe341c6500a60e4f06c77f87cd976c927249a90
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  transition: all 0.3s ease;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
 }
+<<<<<<< HEAD
+=======
 .trade_button a:hover {
   background-color: #f86a19;
 }
@@ -997,7 +1126,36 @@ ul {
   transition: all 0.3s ease;
   text-align: center;
 }
+<<<<<<< HEAD
 .equipment_card .card_btns .buy:hover {
   color: #fff;
   background-color: #FF8743;
+=======
+>>>>>>> ffe341c6500a60e4f06c77f87cd976c927249a90
+.trade_checkbox input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 13px;
+  border: 1.5px solid #fff;
+  background-color: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.trade_checkbox input:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 4.5px;
+  transform: translate(-50%, -50%);
+  background-image: url("../images/checkbox-check.svg"); /* <- BU YERDA O‘ZINGIZ XOHlAGAN RASM URL sini qo‘ying */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+>>>>>>> 6e47fe2bd6c09c5d1067d00594fb35b98e4324be
 }/*# sourceMappingURL=main.css.map */
