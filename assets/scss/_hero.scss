@@ -1,0 +1,85 @@
+.hero{
+    background: 
+    linear-gradient(180deg, #161616 -17.63%, rgba(22, 22, 22, 0.40) 73.59%, rgba(22, 22, 22, 0.00) 100%),
+    url("../images/hero_banner.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &_block{
+        margin-top: 31px;
+    }
+    &_main{
+        display: flex;
+        flex-direction: column;
+    }
+    &_title{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 47px;
+        h1{
+            background: linear-gradient(90deg, rgba(230, 120, 57, 0.68) 0%, rgba(230, 120, 57, 0.00) 92.38%);
+            width: 77%;
+            padding: 3px 19px;
+            color: #FFF;
+            font-family: Inter;
+            font-size: 52px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+        h2{
+            text-align: right;
+            color: #FFF;
+            font-family: Inter;
+            font-size: 44px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+    }
+    &_list{
+        background: rgba(31, 35, 36, 0.15);
+        padding: 15px 21px;
+        margin-bottom: 32px;
+        ul{
+            display: flex;
+            gap: 78px;
+            align-items: center;
+        }
+        li{
+            display: flex;
+            gap: 7px;
+            align-items: center;
+            color: #FFF;
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 30px;
+        }
+    }
+    &_button{
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        a{
+            border-radius: 26px;
+            background-color: #FF8743;
+            padding: 13px 38px;
+            color: #FFF;
+            font-family: "Open Sans";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            transition: all .3s ease;
+            &:hover{
+                background-color: #f86a19;
+            }
+        }
+    }
+}
