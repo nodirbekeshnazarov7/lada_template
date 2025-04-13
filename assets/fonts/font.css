@@ -1,0 +1,43 @@
+/* Open Sans */
+@font-face {
+    font-family: "Open Sans";
+    src: url("./OpenSans/OpenSans-Light.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./OpenSans/OpenSans-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./OpenSans/OpenSans-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./OpenSans/OpenSans-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./OpenSans/OpenSans-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./OpenSans/OpenSans-ExtraBold.ttf");
+    font-weight: 800;
+}
+
+/* Inter */
+@font-face {
+    font-family: Inter;
+    src: url("./Inter/Inter_18pt-Regular.ttf");
+    font-weight: 400;
+}
