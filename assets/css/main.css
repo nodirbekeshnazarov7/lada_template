@@ -187,9 +187,14 @@ html::-webkit-scrollbar-thumb {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "TT Travels";
   background: #fff;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -204,6 +209,382 @@ body {
 
 ul {
   list-style: none;
+}
+
+.custom_modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+.custom_modal_backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.custom_modal_content {
+  position: relative;
+  background: #fff;
+  width: 500px;
+  max-width: 90%;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 10000;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.custom_modal_close {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.input_error {
+  border: 1px solid red !important;
+}
+
+#credit_modal .custom_modal_content {
+  background-image: url("../images/credit_modal.png");
+  background-size: cover;
+  width: 904px;
+  height: 518px;
+  flex-shrink: 0;
+  aspect-ratio: 452/259;
+  background-size: cover;
+  overflow: hidden;
+  padding: 40px 62px;
+}
+#credit_modal .modal_rotate {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  background: linear-gradient(90deg, rgba(34, 31, 32, 0) 45.48%, rgba(34, 31, 32, 0.3) 70.59%, #221F20 100%), linear-gradient(90deg, rgba(56, 68, 81, 0) 56.89%, #2E3A47 100%);
+}
+#credit_modal .custom_modal_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 100%;
+}
+#credit_modal form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#credit_modal h3 {
+  color: #FF8743;
+  text-align: right;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#credit_modal .credit_formInfo {
+  max-width: 211px;
+}
+#credit_modal .credit_formInfo input {
+  width: 100%;
+  border-radius: 26px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+  padding: 7px 20px;
+  margin-bottom: 7px;
+  outline: none;
+  color: #FFF;
+  opacity: 0.5;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.7%; /* 22.605px */
+}
+#credit_modal .credit_formInfo input::placeholder {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.7%; /* 22.605px */
+}
+#credit_modal .credit_formInfo input:focus {
+  opacity: 1;
+}
+#credit_modal .credit_button {
+  text-align: center;
+  max-width: 211px;
+  width: 100%;
+  margin-bottom: 9px;
+}
+#credit_modal .credit_button a {
+  display: inline-block;
+  width: 100%;
+  border-radius: 26px;
+  background: #FF8743;
+  padding: 9px 20px;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: all 0.3s ease;
+}
+#credit_modal .credit_button a:hover {
+  background-color: #f86a19;
+}
+#credit_modal .credit_checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#credit_modal .credit_checkbox label {
+  color: #F7FCFB;
+  font-family: "Open Sans";
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+#credit_modal .credit_checkbox a {
+  color: #F7FCFB;
+  font-family: "Open Sans";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+#credit_modal .credit_checkbox input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: #9C9C9C;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+#credit_modal .credit_checkbox input:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 4.5px;
+  transform: translate(-50%, -50%);
+  background-image: url("../images/checkbox-check.svg"); /* <- BU YERDA O‘ZINGIZ XOHlAGAN RASM URL sini qo‘ying */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#offers_modal .custom_modal_content {
+  background-image: url("../images/offers_modal.png");
+  background-size: cover;
+  width: 904px;
+  height: 518px;
+  flex-shrink: 0;
+  aspect-ratio: 452/259;
+  background-size: cover;
+  overflow: hidden;
+  padding: 40px 62px;
+}
+#offers_modal .modal_rotate {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  background: linear-gradient(270deg, rgba(34, 31, 32, 0) 45.48%, rgba(34, 31, 32, 0.3) 70.59%, #221F20 100%), linear-gradient(270deg, rgba(56, 68, 81, 0) 56.89%, #2E3A47 100%);
+}
+#offers_modal .custom_modal_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+#offers_modal form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#offers_modal h3 {
+  color: #FF8743;
+  text-align: left;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#offers_modal p {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 120% */
+}
+#offers_modal .credit_formInfo {
+  max-width: 254px;
+}
+#offers_modal .credit_formInfo input {
+  width: 100%;
+  border-radius: 26px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+  padding: 7px 20px;
+  margin-bottom: 7px;
+  outline: none;
+  color: #FFF;
+  opacity: 0.5;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.7%; /* 22.605px */
+}
+#offers_modal .credit_formInfo input::placeholder {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.7%; /* 22.605px */
+}
+#offers_modal .credit_formInfo input:focus {
+  opacity: 1;
+}
+#offers_modal .credit_button {
+  text-align: center;
+  max-width: 254px;
+  width: 100%;
+  margin-bottom: 9px;
+}
+#offers_modal .credit_button a {
+  display: inline-block;
+  width: 100%;
+  border-radius: 26px;
+  background: #FF8743;
+  padding: 9px 20px;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: all 0.3s ease;
+}
+#offers_modal .credit_button a:hover {
+  background-color: #f86a19;
+}
+#offers_modal .credit_checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#offers_modal .credit_checkbox label {
+  color: #F7FCFB;
+  font-family: "Open Sans";
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+#offers_modal .credit_checkbox a {
+  color: #F7FCFB;
+  font-family: "Open Sans";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+#offers_modal .credit_checkbox input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: #9C9C9C;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+#offers_modal .credit_checkbox input:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 4.5px;
+  transform: translate(-50%, -50%);
+  background-image: url("../images/checkbox-check.svg"); /* <- BU YERDA O‘ZINGIZ XOHlAGAN RASM URL sini qo‘ying */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#confirm_modal .custom_modal_content {
+  height: 238px;
+  width: 386px;
+  background: linear-gradient(270deg, #2E3A47 17.5%, #4C5865 85.8%);
+  text-align: center;
+}
+#confirm_modal .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 26px;
+}
+#confirm_modal h3 {
+  color: #FF8743;
+  font-family: "Open Sans";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 136.17%; /* 38.128px */
+  margin-bottom: 16px;
+}
+#confirm_modal p {
+  color: #FFF;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 136.17%; /* 27.234px */
 }
 
 .header_block {
@@ -224,6 +605,12 @@ ul {
   display: flex;
   align-items: center;
   gap: 25px;
+}
+.header_logo .logo {
+  transition: all 0.3s ease;
+}
+.header_logo .logo:hover {
+  opacity: 0.4;
 }
 .header_logo .map {
   display: flex;
@@ -276,6 +663,96 @@ ul {
 }
 .header_phone a:hover {
   opacity: 0.7;
+}
+
+.footer {
+  background-color: #4C5865;
+}
+.footer_main {
+  padding: 36px 0;
+}
+.footer_main ul {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+.footer_main ul li a {
+  color: #FFF;
+  text-align: justify;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  transition: all 0.3s ease;
+}
+.footer_main ul li a:hover {
+  color: rgb(188, 186, 186);
+}
+.footer_logo {
+  display: flex;
+  align-items: center;
+  gap: 43px;
+  margin-bottom: 32px;
+}
+.footer_logo p {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.footer_desc {
+  margin-bottom: 11px;
+}
+.footer_desc p {
+  text-align: justify;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.footer_link {
+  margin-bottom: 17px;
+}
+.footer_link a {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  transition: all 0.3s ease;
+}
+.footer_link a:hover {
+  color: rgb(188, 186, 186);
+}
+.footer_text {
+  margin-bottom: 27px;
+}
+.footer_text p {
+  color: #FFF;
+  text-align: justify;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .hero {
@@ -362,6 +839,9 @@ ul {
   background-color: #f86a19;
 }
 
+.models {
+  margin-bottom: 40px;
+}
 .models h2 {
   text-align: center;
   color: #4C5865;
@@ -423,6 +903,181 @@ ul {
   right: -35px;
   display: none;
 }
+.models .model_cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 23px;
+}
+.models .model_card {
+  background-image: url("../images/model_card_bg.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px 44px 0;
+}
+.models .model_card .card_left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.models .model_card .card_left h3 {
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.models .model_card .card_left ul {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.models .model_card .card_left li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.models .model_card .card_brand {
+  position: relative;
+  left: -60px;
+}
+.models .model_card .card_brand span {
+  position: absolute;
+  left: 58px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFF;
+  leading-trim: both;
+  text-edge: cap;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.models .model_card .card_right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.models .model_card .old_cost {
+  color: rgba(76, 88, 101, 0.61);
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Open Sans";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  position: relative;
+}
+.models .model_card .old_cost::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 1px;
+  background-color: rgba(76, 88, 101, 0.61);
+}
+.models .model_card .new_cost {
+  color: #FF8743;
+  font-family: "Open Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: lowercase;
+  text-wrap: nowrap;
+}
+.models .model_card .new_cost span {
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: lowercase;
+  margin-right: 32px;
+}
+.models .model_card .credit_cost {
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: lowercase;
+  text-wrap: nowrap;
+  margin-right: auto;
+  margin-bottom: 12px;
+}
+.models .model_card .credit_cost span {
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: lowercase;
+  margin-right: 6px;
+}
+.models .model_card .card_btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.models .model_card .card_btns .get {
+  width: 100%;
+  border-radius: 26px;
+  background: #FF8743;
+  padding: 12px 40px;
+  text-wrap: nowrap;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+.models .model_card .card_btns .get:hover {
+  background-color: #f86a19;
+}
+.models .model_card .card_btns .buy {
+  width: 100%;
+  border-radius: 26px;
+  border: 1px solid #4C5865;
+  padding: 12px 40px;
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.models .model_card .card_btns .buy:hover {
+  color: #fff;
+  background-color: #4C5865;
+}
 
 .trade {
   background: linear-gradient(270deg, rgba(34, 31, 32, 0) 0%, rgba(34, 31, 32, 0.5) 31.93%, #221F20 100%), url("../images/trade_banner.png");
@@ -577,20 +1232,75 @@ ul {
   background-position: center;
 }
 
-.trade {
-  background: linear-gradient(270deg, rgba(34, 31, 32, 0) 0%, rgba(34, 31, 32, 0.5) 31.93%, #221F20 100%), url("../images/trade_banner.png");
-  background-repeat: no-repeat;
+.credit {
+  margin-top: 50px;
+}
+.credit_list {
+  display: flex;
+  gap: 4px;
+}
+.credit_list .card1 {
+  width: calc(50% - 2px);
+  background: linear-gradient(90deg, rgba(34, 31, 32, 0) 0%, rgba(34, 31, 32, 0.5) 31.93%, #221F20 100%), url("../images/credit-card1.png");
   background-size: cover;
-  background-position: center;
+  text-align: right;
 }
-.trade_main {
-  padding-top: 34px;
-  padding-bottom: 34px;
+.credit_list .card1 ul {
+  margin-bottom: 29px;
 }
-.trade_title {
-  margin-bottom: 15px;
+.credit_list .card1 ul li {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 7px;
+  margin-bottom: 12px;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 111.111% */
 }
-.trade_title h2 {
+.credit_list .card1 form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.credit_list .card2 {
+  width: calc(50% - 2px);
+  background: linear-gradient(270deg, rgba(34, 31, 32, 0) 0%, rgba(34, 31, 32, 0.5) 31.93%, #221F20 100%), url("../images/credit-card2.png");
+  background-size: cover;
+}
+.credit_list .card2 p {
+  margin-bottom: 57px;
+}
+.credit_list .card2 ul {
+  margin-bottom: 57px;
+}
+.credit_list .card2 ul li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  color: #FFF;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.credit_list .card2 .button {
+  max-width: 350px;
+}
+.credit_list .card2 .button a {
+  padding: 16px 61px;
+}
+.credit_item {
+  padding: 29px 60px;
+}
+.credit_title h3 {
   color: #FFF;
   font-family: "Open Sans";
   font-size: 34px;
@@ -598,40 +1308,21 @@ ul {
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
-.trade_text {
-  margin-bottom: 39px;
-}
-.trade_text p {
+.credit_text p {
   color: #FFF;
   font-family: "Open Sans";
   font-size: 26px;
   font-style: normal;
   font-weight: 600;
-  line-height: 29px;
+  line-height: 29px; /* 111.538% */
+  margin-bottom: 29px;
 }
-.trade_text p span {
-  font-weight: 700;
-}
-.trade_list {
-  margin-bottom: 39px;
-}
-.trade_list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #FFF;
-  font-family: "Open Sans";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 111.111% */
-  margin-bottom: 9px;
-}
-.trade_formInfo {
+.credit_formInfo {
   max-width: 430px;
 }
-.trade_formInfo input {
+.credit_formInfo input {
   width: 100%;
   border-radius: 26px;
   border: 1px solid #FFF;
@@ -647,7 +1338,7 @@ ul {
   font-weight: 400;
   line-height: 150.7%; /* 22.605px */
 }
-.trade_formInfo input::placeholder {
+.credit_formInfo input::placeholder {
   color: #FFF;
   font-family: "Open Sans";
   font-size: 15px;
@@ -655,16 +1346,19 @@ ul {
   font-weight: 400;
   line-height: 150.7%; /* 22.605px */
 }
-.trade_formInfo input:focus {
+.credit_formInfo input:focus {
   opacity: 1;
 }
-.trade_button {
+.credit_button {
+  text-align: center;
+  max-width: 430px;
   margin-bottom: 9px;
 }
-.trade_button a {
+.credit_button a {
+  width: 100%;
   border-radius: 26px;
   background: #FF8743;
-  padding: 16px 101px;
+  padding: 16px 125px;
   color: #FFF;
   font-family: "Open Sans";
   font-size: 18px;
@@ -673,23 +1367,24 @@ ul {
   line-height: normal;
   transition: all 0.3s ease;
 }
-.trade_button a:hover {
+.credit_button a:hover {
   background-color: #f86a19;
 }
-.trade_checkbox {
+.credit_checkbox {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-.trade_checkbox label {
+.credit_checkbox label {
   color: #F7FCFB;
   font-family: "Open Sans";
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-align: left;
 }
-.trade_checkbox a {
+.credit_checkbox a {
   color: #F7FCFB;
   font-family: "Open Sans";
   font-size: 10px;
@@ -703,7 +1398,7 @@ ul {
   text-underline-offset: auto;
   text-underline-position: from-font;
 }
-.trade_checkbox input {
+.credit_checkbox input {
   appearance: none;
   -webkit-appearance: none;
   width: 14px;
@@ -716,7 +1411,7 @@ ul {
   display: inline-block;
   vertical-align: middle;
 }
-.trade_checkbox input:checked::after {
+.credit_checkbox input:checked::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -728,4 +1423,334 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.equipment {
+  padding-top: 50px;
+}
+.equipment h2 {
+  text-align: center;
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 25px;
+}
+.equipment .equipment_filters {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.equipment .custom-select-wrapper {
+  position: relative;
+  width: 280px;
+  border-radius: 26px;
+  border: 1px solid rgba(76, 88, 101, 0.26);
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.equipment .custom-selected {
+  padding: 12px;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  border-radius: 26px;
+  border: 1px solid rgba(76, 88, 101, 0.26);
+}
+.equipment .custom-selected .arrow {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  transition: transform 0.3s ease;
+}
+.equipment .custom-select-dropdown {
+  display: none;
+  border: 1px solid #ccc;
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  z-index: 999;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 26px;
+}
+.equipment .custom-select-wrapper.open .custom-select-dropdown {
+  display: block;
+}
+.equipment .custom-select-dropdown .search {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  outline: none;
+}
+.equipment .custom-select-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.equipment .custom-select-dropdown li {
+  padding: 15px 15px;
+  cursor: pointer;
+}
+.equipment .custom-select-dropdown li:hover {
+  background-color: #f0f0f0;
+}
+.equipment_cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 23px;
+}
+.equipment_card {
+  background-image: url("../images/equipment_card_bg.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 42px;
+}
+.equipment_card .card_left h3 {
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.equipment_card .card_left p {
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: lowercase;
+  margin-bottom: 28px;
+}
+.equipment_card .card_left ul {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 13px 0;
+}
+.equipment_card .card_left li {
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+.equipment_card .card_right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.equipment_card .old_cost {
+  color: rgba(76, 88, 101, 0.61);
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Open Sans";
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  position: relative;
+}
+.equipment_card .old_cost::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 1px;
+  background-color: rgba(76, 88, 101, 0.61);
+}
+.equipment_card .new_cost {
+  color: #FF8743;
+  font-family: "Open Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: lowercase;
+  text-wrap: nowrap;
+}
+.equipment_card .new_cost span {
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: lowercase;
+  margin-right: 32px;
+}
+.equipment_card .credit_cost {
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: lowercase;
+  text-wrap: nowrap;
+  margin-right: auto;
+  margin-bottom: 12px;
+}
+.equipment_card .credit_cost span {
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: lowercase;
+  margin-right: 6px;
+}
+.equipment_card .card_btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.equipment_card .card_btns .get {
+  width: 100%;
+  border-radius: 26px;
+  background: #FF8743;
+  padding: 12px 40px;
+  text-wrap: nowrap;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+}
+.equipment_card .card_btns .get:hover {
+  background-color: #f86a19;
+}
+.equipment_card .card_btns .buy {
+  width: 100%;
+  border-radius: 26px;
+  outline: 1px solid #FF8743;
+  padding: 12px 40px;
+  color: #FF8743;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.equipment_card .card_btns .buy:hover {
+  color: #fff;
+  background-color: #FF8743;
+}
+.equipment_more {
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+}
+.equipment_more a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 0.3s ease;
+}
+.equipment_more a:hover {
+  opacity: 0.7;
+}
+.equipment_more img {
+  transition: transform 0.3s ease;
+}
+.equipment_more img.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.contact {
+  padding: 25px 0 0;
+  position: relative;
+}
+.contact h2 {
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 26px;
+}
+.contact .contact_map {
+  position: relative;
+}
+.contact .contact_map .container {
+  position: absolute;
+  top: 29px;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.contact .contact_card {
+  background: rgba(76, 88, 101, 0.89);
+  backdrop-filter: blur(2.25px);
+  padding: 15px 19px;
+}
+.contact .contact_card .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.contact .contact_card ul {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 21px;
+}
+.contact .contact_card li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 235.609%; /* 28.273px */
+}
+.contact .contact_card .request_call {
+  border-radius: 26px;
+  background: #FF8743;
+  width: 100%;
+  padding: 8px 57px;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: all 0.3s ease;
+}
+.contact .contact_card .request_call:hover {
+  background-color: #f86a19;
 }/*# sourceMappingURL=main.css.map */

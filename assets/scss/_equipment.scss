@@ -1,5 +1,5 @@
-.models{
-    margin-bottom: 40px;
+.equipment{
+    padding-top: 50px;
     h2{
         text-align: center;
         color: #4C5865;
@@ -8,80 +8,96 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-        margin: 26px auto;
+        margin-bottom: 25px;
     }
-    .tabs_block {
+    .equipment_filters{
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+    .custom-select-wrapper {
         position: relative;
-        width: 66%; // yoki 66% bo'lishi mumkin
-        margin: 0 auto;
-    
-        .tabs_wrapper {
-            overflow: hidden;
-            width: 100%;
-        }
-    
-        .tabs {
-            display: flex;
-            // gap: 37px;
-            transition: transform 0.3s ease;
-            will-change: transform;
-            li {
-                color: #4C5865;
-                font-family: "Open Sans";
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                white-space: nowrap;
-                text-align: center;
-                cursor: pointer;
-                padding-left: 19px;
-                padding-right: 19px;
-                &:first-child{
-                    padding-left: 0;
-                }
-                // &:last-child
-                &.active {
-                    color: #FF8743;
-                }
-            }
-        }
-    
-        .tab_prev, .tab_next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10;
-            cursor: pointer;
-    
-            img {
-                width: 24px;
-            }
-        }
-    
-        .tab_prev { left: -35px; display: none; }
-        .tab_next { right: -35px; display: none; }
+        width: 280px;
+        border-radius: 26px;
+        border: 1px solid rgba(76, 88, 101, 0.26);
+        color: #4C5865;
+        font-family: "Open Sans";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
-
-    .model_cards{
+    
+    .custom-selected {
+        padding: 12px;
+        cursor: pointer;
+        position: relative;
+        background-color: #fff;
+        border-radius: 26px;
+        border: 1px solid rgba(76, 88, 101, 0.26);
+    }
+    
+    .custom-selected .arrow {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        transition: transform 0.3s ease;
+    }
+    
+    .custom-select-dropdown {
+        display: none;
+        border: 1px solid #ccc;
+        position: absolute;
+        width: 100%;
+        background: #fff;
+        z-index: 999;
+        max-height: 200px;
+        overflow-y: auto;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-radius: 26px;
+    }
+    
+    .custom-select-wrapper.open .custom-select-dropdown {
+        display: block;
+    }
+    
+    .custom-select-dropdown .search {
+        width: 100%;
+        padding: 12px 15px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        box-sizing: border-box;
+        outline: none;
+    }
+    
+    .custom-select-dropdown ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .custom-select-dropdown li {
+        padding: 15px 15px;
+        cursor: pointer;
+    }
+    
+    .custom-select-dropdown li:hover {
+        background-color: #f0f0f0;
+    }
+    &_cards{
         display: flex;
         flex-direction: column;
         gap: 24px;
         margin-top: 23px;
     }
-    .model_card{
-        background-image: url("../images/model_card_bg.svg");
-        background-repeat: no-repeat;
-        background-position: top left;
+    &_card{
+        background-image: url("../images/equipment_card_bg.png");
         background-size: cover;
         display: flex;
+        align-items: center;
         justify-content: space-between;
-        align-items: flex-start;
-        padding: 15px 44px 0;
+        padding: 20px 42px;
         .card_left{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
             h3{
                 color: #4C5865;
                 font-family: "Open Sans";
@@ -90,40 +106,28 @@
                 font-weight: 700;
                 line-height: normal;
             }
-            ul{
-                display: flex;
-                flex-direction: column;
-                gap: 9px;
-            }
-            li{
-                display: flex;
-                align-items: center;
-                gap: 12px;
+            p{
                 color: #4C5865;
                 font-family: "Open Sans";
-                font-size: 14px;
+                font-size: 18px;
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
+                text-transform: lowercase;  
+                margin-bottom: 28px;
             }
-        }
-        .card_brand{
-            position: relative;
-            left: -60px;
-            span{
-                position: absolute;
-                left: 58px;
-                top: 50%;
-                transform: translateY(-50%);
-                color: #FFF;
-                leading-trim: both;
-                text-edge: cap;
-                text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+            ul{
+                display: grid;
+                grid-template-columns: auto auto;
+                gap: 13px 0;
+            }
+            li{
+                color: #4C5865;
                 font-family: "Open Sans";
-                font-size: 14px;
+                font-size: 16px;
                 font-style: normal;
-                font-weight: 700;
-                line-height: normal;
+                font-weight: 400;
+                line-height: 24px; /* 150% */
             }
         }
         .card_right{
@@ -221,9 +225,9 @@
             .buy{
                 width: 100%;
                 border-radius: 26px;
-                border: 1px solid #4C5865;
+                outline: 1px solid #FF8743;
                 padding: 12px 40px;
-                color: #4C5865;
+                color: #FF8743;
                 font-family: "Open Sans";
                 font-size: 14px;
                 font-style: normal;
@@ -233,8 +237,35 @@
                 text-align: center;
                 &:hover{
                     color: #fff;
-                    background-color: #4C5865;
+                    background-color: #FF8743;
                 }
+            }
+        }
+    }
+    &_more{
+        padding: 25px 0;
+        display: flex;
+        justify-content: center;
+        a{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #4C5865;
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transition: all .3s ease;
+            &:hover{
+                opacity: .7;
+            }
+        }
+        img{
+            transition: transform .3s ease;
+            &.rotated{
+                transform: rotate(180deg);
+                transition: transform 0.3s ease;
             }
         }
     }
