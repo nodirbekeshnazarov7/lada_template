@@ -1,0 +1,15 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="check-mark_14105854 1" clip-path="url(#clip0_2036_419)">
+<circle id="Ellipse 1" cx="10.3572" cy="10.3572" r="6.78571" fill="white"/>
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M9.99988 0.585938C15.1907 0.585938 19.4141 4.80902 19.4141 9.99996C19.4141 15.1908 15.1907 19.4139 9.99988 19.4139C4.80906 19.4139 0.585938 15.1908 0.585938 9.99996C0.585938 4.8091 4.80902 0.585938 9.99988 0.585938ZM8.75527 11.7389L6.64098 9.62508C6.43375 9.41789 6.09809 9.41789 5.8909 9.62508C5.68402 9.83191 5.6841 10.168 5.8909 10.3748L8.38055 12.8645C8.58711 13.0711 8.92363 13.0711 9.1302 12.8645L14.1085 7.88566C14.3157 7.67844 14.3157 7.34308 14.1085 7.13586C13.9014 6.92871 13.5659 6.92875 13.3588 7.13586L8.75527 11.7389Z" fill="url(#paint0_linear_2036_419)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_2036_419" x1="3.34637" y1="16.6535" x2="16.6536" y2="3.34633" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D75F1B"/>
+<stop offset="1" stop-color="#FFA561"/>
+</linearGradient>
+<clipPath id="clip0_2036_419">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
