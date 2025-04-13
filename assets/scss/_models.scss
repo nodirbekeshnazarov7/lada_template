@@ -1,0 +1,64 @@
+.models{
+    h2{
+        text-align: center;
+        color: #4C5865;
+        font-family: "Open Sans";
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 26px auto;
+    }
+    .tabs_block {
+        position: relative;
+        width: 66%; // yoki 66% bo'lishi mumkin
+        margin: 0 auto;
+    
+        .tabs_wrapper {
+            overflow: hidden;
+            width: 100%;
+        }
+    
+        .tabs {
+            display: flex;
+            // gap: 37px;
+            transition: transform 0.3s ease;
+            will-change: transform;
+            li {
+                color: #4C5865;
+                font-family: "Open Sans";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                white-space: nowrap;
+                text-align: center;
+                cursor: pointer;
+                padding-left: 19px;
+                padding-right: 19px;
+                &:first-child{
+                    padding-left: 0;
+                }
+                // &:last-child
+                &.active {
+                    color: #FF8743;
+                }
+            }
+        }
+    
+        .tab_prev, .tab_next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            cursor: pointer;
+    
+            img {
+                width: 24px;
+            }
+        }
+    
+        .tab_prev { left: -35px; display: none; }
+        .tab_next { right: -35px; display: none; }
+    }
+}
