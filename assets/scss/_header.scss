@@ -18,6 +18,12 @@
         display: flex;
         align-items: center;
         gap: 25px;
+        .logo{
+            transition: all .3s ease;
+            &:hover{
+                opacity: .4;
+            }
+        }
         .map{
             display: flex;
             align-items: center;
@@ -33,6 +39,7 @@
                 opacity: .7;
             }
         }
+
     }
     &_menus{
         display: flex;

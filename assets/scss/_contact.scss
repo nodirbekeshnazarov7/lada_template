@@ -1,0 +1,66 @@
+.contact{
+    padding: 25px 0 0;
+    position: relative;
+    h2{
+        color: #4C5865;
+        font-family: "Open Sans";
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 26px;
+    }
+    .contact_map{
+        position: relative;
+        .container{
+            position: absolute;
+            top: 29px;
+            display: flex;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .contact_card{
+        background: rgba(76, 88, 101, 0.89);
+        backdrop-filter: blur(2.25px);
+        padding: 15px 19px;
+        .logo{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 14px;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 21px;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #FFF;
+            font-family: "Open Sans";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 235.609%; /* 28.273px */
+        }
+        .request_call{
+            border-radius: 26px;
+            background: #FF8743;
+            width: 100%;
+            padding: 8px 57px;
+            color: #FFF;
+            font-family: "Open Sans";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            transition: all .3s ease;
+            &:hover{
+                background-color: #f86a19;
+            }
+        }
+    }
+}
