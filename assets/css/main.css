@@ -362,6 +362,347 @@ ul {
   background-color: #f86a19;
 }
 
+<<<<<<< HEAD
+.trade {
+  background: linear-gradient(270deg, rgba(34, 31, 32, 0) 0%, rgba(34, 31, 32, 0.5) 31.93%, #221F20 100%), url("../images/trade_banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.trade_main {
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+.trade_title {
+  margin-bottom: 15px;
+}
+.trade_title h2 {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.trade_text {
+  margin-bottom: 39px;
+}
+.trade_text p {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 29px;
+}
+.trade_text p span {
+  font-weight: 700;
+}
+.trade_list {
+  margin-bottom: 39px;
+}
+.trade_list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 111.111% */
+  margin-bottom: 9px;
+}
+.trade_formInfo {
+  max-width: 430px;
+}
+.trade_formInfo input {
+  width: 100%;
+  border-radius: 26px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+  padding: 15px 20px;
+  margin-bottom: 18px;
+  outline: none;
+  color: #FFF;
+  opacity: 0.5;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.7%; /* 22.605px */
+}
+.trade_formInfo input::placeholder {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.7%; /* 22.605px */
+}
+.trade_formInfo input:focus {
+  opacity: 1;
+}
+.trade_button {
+  margin-bottom: 9px;
+}
+.trade_button a {
+  border-radius: 26px;
+  background: #FF8743;
+  padding: 16px 101px;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: all 0.3s ease;
+}
+.trade_button a:hover {
+  background-color: #f86a19;
+}
+.trade_checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.trade_checkbox label {
+  color: #F7FCFB;
+  font-family: "Open Sans";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.trade_checkbox a {
+  color: #F7FCFB;
+  font-family: "Open Sans";
+  font-size: 10px;
+=======
+.models h2 {
+  text-align: center;
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 26px auto;
+}
+.models .tabs_block {
+  position: relative;
+  width: 66%;
+  margin: 0 auto;
+}
+.models .tabs_block .tabs_wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.models .tabs_block .tabs {
+  display: flex;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+.models .tabs_block .tabs li {
+  color: #4C5865;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+.models .tabs_block .tabs li:first-child {
+  padding-left: 0;
+}
+.models .tabs_block .tabs li.active {
+  color: #FF8743;
+}
+.models .tabs_block .tab_prev, .models .tabs_block .tab_next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+.models .tabs_block .tab_prev img, .models .tabs_block .tab_next img {
+  width: 24px;
+}
+.models .tabs_block .tab_prev {
+  left: -35px;
+  display: none;
+}
+.models .tabs_block .tab_next {
+  right: -35px;
+  display: none;
+}
+
+.trade {
+  background: linear-gradient(270deg, rgba(34, 31, 32, 0) 0%, rgba(34, 31, 32, 0.5) 31.93%, #221F20 100%), url("../images/trade_banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.trade_main {
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+.trade_title {
+  margin-bottom: 15px;
+}
+.trade_title h2 {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.trade_text {
+  margin-bottom: 39px;
+}
+.trade_text p {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 29px;
+}
+.trade_text p span {
+  font-weight: 700;
+}
+.trade_list {
+  margin-bottom: 39px;
+}
+.trade_list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 111.111% */
+  margin-bottom: 9px;
+}
+.trade_formInfo {
+  max-width: 430px;
+}
+.trade_formInfo input {
+  width: 100%;
+  border-radius: 26px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+  padding: 15px 20px;
+  margin-bottom: 18px;
+  outline: none;
+  color: #FFF;
+  opacity: 0.5;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.7%; /* 22.605px */
+}
+.trade_formInfo input::placeholder {
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.7%; /* 22.605px */
+}
+.trade_formInfo input:focus {
+  opacity: 1;
+}
+.trade_button {
+  margin-bottom: 9px;
+}
+.trade_button a {
+  border-radius: 26px;
+  background: #FF8743;
+  padding: 16px 101px;
+  color: #FFF;
+  font-family: "Open Sans";
+  font-size: 18px;
+>>>>>>> ffe341c6500a60e4f06c77f87cd976c927249a90
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+<<<<<<< HEAD
+=======
+.trade_button a:hover {
+  background-color: #f86a19;
+}
+.trade_checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.trade_checkbox label {
+  color: #F7FCFB;
+  font-family: "Open Sans";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.trade_checkbox a {
+  color: #F7FCFB;
+  font-family: "Open Sans";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+.trade_checkbox input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 13px;
+  border: 1.5px solid #fff;
+  background-color: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.trade_checkbox input:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 4.5px;
+  transform: translate(-50%, -50%);
+  background-image: url("../images/checkbox-check.svg"); /* <- BU YERDA O‘ZINGIZ XOHlAGAN RASM URL sini qo‘ying */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .trade {
   background: linear-gradient(270deg, rgba(34, 31, 32, 0) 0%, rgba(34, 31, 32, 0.5) 31.93%, #221F20 100%), url("../images/trade_banner.png");
   background-repeat: no-repeat;
@@ -488,6 +829,7 @@ ul {
   text-underline-offset: auto;
   text-underline-position: from-font;
 }
+>>>>>>> ffe341c6500a60e4f06c77f87cd976c927249a90
 .trade_checkbox input {
   appearance: none;
   -webkit-appearance: none;
