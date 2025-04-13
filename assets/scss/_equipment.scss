@@ -242,4 +242,31 @@
             }
         }
     }
+    &_more{
+        padding: 25px 0;
+        display: flex;
+        justify-content: center;
+        a{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #4C5865;
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            transition: all .3s ease;
+            &:hover{
+                opacity: .7;
+            }
+        }
+        img{
+            transition: transform .3s ease;
+            &.rotated{
+                transform: rotate(180deg);
+                transition: transform 0.3s ease;
+            }
+        }
+    }
 }

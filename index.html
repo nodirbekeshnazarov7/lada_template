@@ -53,9 +53,9 @@
                             </span>
                             <li><a href="#models">Модельный ряд</a></li>
                             <li><a href="#equipment">Комплектации</a></li>
-                            <li><a href="#">Автокредит</a></li>
+                            <li><a href="#credit">Автокредит</a></li>
                             <li><a href="#trade">Trade-In</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#contact">Контакты</a></li>
                             <li class="d-lg-none"><a href="tel:+88005555555" class="phone">8 800 555 55 55</a></li>
                         </ul>
                         <div class="header_phone">
@@ -160,8 +160,9 @@
                                     <div class="new_cost"><span>цена от </span>659 900 ₽</div>
                                     <div class="credit_cost"><span>в кредит от</span>7 856 ₽ / мес. </div>
                                     <div class="card_btns">
-                                        <a href="#" class="get">Получить предложение</a>
-                                        <a href="#" class="buy">Купить в кредит</a>
+                                        <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить предложение</a>
+                                        <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить
+                                            в кредит</a>
                                     </div>
                                 </div>
                             </div>
@@ -199,8 +200,9 @@
                                     <div class="new_cost"><span>цена от </span>659 900 ₽</div>
                                     <div class="credit_cost"><span>в кредит от</span>7 856 ₽ / мес. </div>
                                     <div class="card_btns">
-                                        <a href="#" class="get">Получить предложение</a>
-                                        <a href="#" class="buy">Купить в кредит</a>
+                                        <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить предложение</a>
+                                        <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить
+                                            в кредит</a>
                                     </div>
                                 </div>
                             </div>
@@ -238,8 +240,9 @@
                                     <div class="new_cost"><span>цена от </span>659 900 ₽</div>
                                     <div class="credit_cost"><span>в кредит от</span>7 856 ₽ / мес. </div>
                                     <div class="card_btns">
-                                        <a href="#" class="get">Получить предложение</a>
-                                        <a href="#" class="buy">Купить в кредит</a>
+                                        <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить предложение</a>
+                                        <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить
+                                            в кредит</a>
                                     </div>
                                 </div>
                             </div>
@@ -300,6 +303,79 @@
             </div>
         </section>
 
+        <section id="credit" class="credit">
+            <div class="credit_list">
+                <div class="credit_item card1">
+                    <div class="credit_title">
+                        <h3>Кредит</h3>
+                    </div>
+                    <div class="credit_text">
+                        <p>Сниженный автокредит на Lada от 7%</p>
+                    </div>
+                    <ul>
+                        <li>
+                            Доп. скидка до 70 000₽
+                            <img src="./assets/images/credit-check.svg" alt="credit-check">
+                        </li>
+                        <li>
+                            Первоначальный взнос 0₽
+                            <img src="./assets/images/credit-check.svg" alt="credit-check">
+                        </li>
+                        <li>
+                            КАСКО и 3 платежа по кредиту в подарок
+                            <img src="./assets/images/credit-check.svg" alt="credit-check">
+                        </li>
+                    </ul>
+                    <form action="">
+                        <div class="credit_formInfo">
+                            <input type="text" name="" id="" placeholder="Имя">
+                            <input type="tel" name="" id="" placeholder="+ 7 (495) 111-11-11">
+                        </div>
+                        <div class="credit_button">
+                            <a href="#">Рассчитать кредит</a>
+                        </div>
+                        <div class="credit_checkbox">
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                Нажимая кнопку “Получит предложение” Вы даете согласие на обработку своих <br>
+                                <a href="#">персональных данных</a>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="credit_item card2">
+                    <div class="credit_title">
+                        <h3>Госпрограмма</h3>
+                    </div>
+                    <div class="credit_text">
+                        <p>Господдержка от Lada со скидкой 25%</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <img src="./assets/images/credit-right-arrow.svg" alt="credit-right-arrow">
+                            Семейный автомобиль
+                        </li>
+                        <li>
+                            <img src="./assets/images/credit-right-arrow.svg" alt="credit-right-arrow">
+                            Первый автомобиль
+                        </li>
+                        <li>
+                            <img src="./assets/images/credit-right-arrow.svg" alt="credit-right-arrow">
+                            Работникам медицины
+                        </li>
+                        <li>
+                            <img src="./assets/images/credit-right-arrow.svg" alt="credit-right-arrow">
+                            Для участников СВО
+                        </li>
+                    </ul>
+                    <div class="credit_button button">
+                        <a href="#">Получить предложение</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
         <section id="equipment" class="equipment">
             <div class="container">
                 <h2>Комплектации</h2>
@@ -327,7 +403,7 @@
                             <ul>
                                 <li>
                                     <img src="./assets/images/tormoz.svg" alt="icon">
-                                    <span>Полный  (4WD)</span>
+                                    <span>Полный (4WD)</span>
                                 </li>
                                 <li>
                                     <img src="./assets/images/hourse.svg" alt="icon">
@@ -348,8 +424,8 @@
                             <div class="new_cost"><span>цена от </span>659 900 ₽</div>
                             <div class="credit_cost"><span>в кредит от</span>7 856 ₽ / мес. </div>
                             <div class="card_btns">
-                                <a href="#" class="get">Получить предложение</a>
-                                <a href="#" class="buy">Купить в кредит</a>
+                                <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить предложение</a>
+                                <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить в кредит</a>
                             </div>
                         </div>
                     </div>
@@ -363,7 +439,7 @@
                             <ul>
                                 <li>
                                     <img src="./assets/images/tormoz.svg" alt="icon">
-                                    <span>Полный  (4WD)</span>
+                                    <span>Полный (4WD)</span>
                                 </li>
                                 <li>
                                     <img src="./assets/images/hourse.svg" alt="icon">
@@ -384,8 +460,8 @@
                             <div class="new_cost"><span>цена от </span>659 900 ₽</div>
                             <div class="credit_cost"><span>в кредит от</span>7 856 ₽ / мес. </div>
                             <div class="card_btns">
-                                <a href="#" class="get">Получить предложение</a>
-                                <a href="#" class="buy">Купить в кредит</a>
+                                <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить предложение</a>
+                                <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить в кредит</a>
                             </div>
                         </div>
                     </div>
@@ -399,7 +475,7 @@
                             <ul>
                                 <li>
                                     <img src="./assets/images/tormoz.svg" alt="icon">
-                                    <span>Полный  (4WD)</span>
+                                    <span>Полный (4WD)</span>
                                 </li>
                                 <li>
                                     <img src="./assets/images/hourse.svg" alt="icon">
@@ -420,20 +496,235 @@
                             <div class="new_cost"><span>цена от </span>659 900 ₽</div>
                             <div class="credit_cost"><span>в кредит от</span>7 856 ₽ / мес. </div>
                             <div class="card_btns">
-                                <a href="#" class="get">Получить предложение</a>
-                                <a href="#" class="buy">Купить в кредит</a>
+                                <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить предложение</a>
+                                <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить в кредит</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="equipment_card">
+                        <div class="card_img">
+                            <img src="./assets/images/lada_granta.png" alt="car">
+                        </div>
+                        <div class="card_left">
+                            <h3>LADA Granta Седан</h3>
+                            <p>Комплектация: 1.6 MT Classic 1.6 л</p>
+                            <ul>
+                                <li>
+                                    <img src="./assets/images/tormoz.svg" alt="icon">
+                                    <span>Полный (4WD)</span>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/hourse.svg" alt="icon">
+                                    <span>190 л.с.</span>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/benzin.svg" alt="icon">
+                                    <span>Бензин</span>
+                                </li>
+                                <li>
+                                    <img src="./assets/images/skor.svg" alt="icon">
+                                    <span>АКПП 6</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card_right">
+                            <div class="old_cost">829 900 ₽</div>
+                            <div class="new_cost"><span>цена от </span>659 900 ₽</div>
+                            <div class="credit_cost"><span>в кредит от</span>7 856 ₽ / мес. </div>
+                            <div class="card_btns">
+                                <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить предложение</a>
+                                <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить в кредит</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="equipment_more">
+                    <a href="#">
+                        <span>показать еще</span>
+                        <img src="./assets/images/equipment_more.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Контакты</h2>
+            <div class="contact_map">
+                <div class="container">
+                    <div class="contact_card">
+                        <div class="logo">
+                            <img src="./assets/images/Logo.svg" alt="logo">
+                        </div>
+                        <ul>
+                            <li>
+                                <img src="./assets/images/contact_phone.svg" alt="icon">
+                                <span>+7 (495) 111 11-11</span>
+                            </li>
+                            <li>
+                                <img src="./assets/images/contact_clock.svg" alt="icon">
+                                <span>Ежедневно с 09.00 - 22.00</span>
+                            </li>
+                            <li>
+                                <img src="./assets/images/contact_map.svg" alt="icon">
+                                <span>27 км МКАД (внешняя сторона)</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="request_call">Заказать звонок</a>
+                    </div>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6962.910068942412!2d37.21410405104592!3d55.627750902283964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5512943980671%3A0x475e98b91047881a!2sLada%2C%20Moscow%20Oblast%2C%20Russia%2C%20143080!5e0!3m2!1sen!2s!4v1744554485360!5m2!1sen!2s"
+                    width="1920" height="399" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
         <!-- footer -->
-        <footer>
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="footer_main">
+                    <div class="footer_logo">
+                        <a href="#">
+                            <img src="./assets/images/Logo.svg" alt="logo">
+                        </a>
+                        <p>ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "Название организации" ИНН 0000000000, ОГРН
+                            0000000000 от 18 февраля 2019 г., <br>Юр. Адрес: 115114, город Москва</p>
+                    </div>
+                    <div class="footer_desc">
+                        <p>Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный
+                            характер и ни при каких условиях не является публичной офертой, определяемой положением ч. 2
+                            ст. 437 Гражданского кодекса Российской Федерации.</p>
+                    </div>
+                    <div class="footer_link">
+                        <a href="#" class="show_more">Подробнее</a>
+                    </div>
+                    <div class="footer_text">
+                        <p>
+                            Обращаем ваше внимание на то, что данный Интернет-сайт носит исключительно информационный
+                            характер и ни при каких условиях не является публичной офертой, определяемой положениями
+                            Статьи 437 Гражданского кодекса Российской Федерации. Для получения подробной информации о
+                            стоимости автомобилей обращайтесь к менеджерам по продажам. Любая информация, содержащаяся
+                            на настоящем сайте, носит исключительно справочный характер и ни при каких обстоятельствах
+                            не может быть расценена как предложение заключить договор (публичная оферта). Дилер не дает
+                            гарантий по поводу своевременности, точности и полноты информации на веб-сайте, а также по
+                            поводу беспрепятственного доступа к нему в любое время. Технические характеристики и
+                            оборудование автомобилей, условия приобретения автомобилей, цены, спецпредложения и
+                            комплектации автомобилей, указанные на сайте, приведены для примера и могут быть изменены в
+                            любое время без предварительного уведомления. Для получения подробной информации об
+                            актуальных ценах на продукцию и наличии автомобилей обращайтесь в дилерский центр.
+                            Приобретение любой продукции бренда осуществляется в соответствии с условиями
+                            индивидуального договора купли-продажи. Представленное изображение автомобиля может
+                            отличаться от реализуемого. Не является публичной офертой. ПТС - Паспорт транспортного
+                            средства. На данном сайте используются зарегистрированные товарные знаки, перечисленные в
+                            разделе Правовая информация. Указана цена на автомобиль в начальной комплектации на
+                            автомобили 2022 модельного года. Для заказов с подтвержденной производственной к.н. 50/2021.
+                            Количество автомобилей ограничено. Размер платежа в день означает величину затрат заемщика,
+                            эквивалентную ежемесячному платежу при условии 30 (тридцати) календарных дней в месяце,
+                            взявшего кредит по программе кредитования ВТБ, Сетелем, Русфинанс Банк, Банк Союз,
+                            Экспобанк, Совкомбанк, Альфа Банк, Тинькофф, Плюсбанк, Банк Оранжевый, Росбанк, Ситибанк,
+                            (далее – «Банк») на покупку нового автомобиля с расчетной розничной ценой в начально
+                            комплектации, на срок 60 мес., с первоначальным взносом 57,92% от стоимости автомобиля,
+                            остаточным платежом (далее ОП) 20% от стоимости автомобиля и процентной ставкой 14,5%.
+                            Данная информация не является офертой Банка, расчет является приблизительным. Полная
+                            стоимость кредита и конкретные параметры кредита будут рассчитаны на основании Анкеты
+                            клиента, направляемой в Банк для одобрения кредитной заявки. Основные условия кредитования
+                            ВТБ, Сетелем, Русфинанс Банк, Банк Союз, Экспобанк, Совкомбанк, Альфа Банк, Тинькофф,
+                            Плюсбанк, Банк Оранжевый, Росбанк, Ситибанк, (далее Банк) на покупку нового автомобиля по
+                            продукту «Кредит с остаточным платежом на приобретение нового автомобиля» валюта кредита –
+                            рубли РФ; сумма кредита от 120 тыс. до 5.8 млн. ₽ Процентная ставка (в % годовых) при сроке
+                            от 12 до 60 мес. – 14,5% при первоначальном взносе (далее ПВ) от 15% (включительно). При ПВ
+                            менее 20% необходимо предоставление полного пакета документов. Минимальный размер
+                            остаточного платежа (далее ОП) в % от стоимости автомобиля – 20%; максимальный размер ОП при
+                            сроке при сроке кредита 12 мес. – 60%, при сроках от 13 до 24 мес. – 50%, при сроках от 25
+                            до 36 мес. – 45%, при сроках от 37 до 48 мес. – 30%, при сроках от 49 до 60 мес. – 20%.
+                            Обеспечение по кредиту – залог приобретаемого автомобиля. Условия кредита действительны до
+                            01.06.2023 и могут быть изменены Банком. Лицензия ЦБ РФ № 3500, г. Москва.
+                        </p>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">Условия кредитования</a>
+                        </li>
+                        <li>
+                            <a href="#">Пользовательское соглашение</a>
+                        </li>
+                        <li>
+                            <a href="#">Политика конфиденциальности</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </footer>
 
+
+        <!-- Modal -->
+        <div class="custom_modal" id="credit_modal">
+            <div class="custom_modal_backdrop"></div>
+            <div class="custom_modal_content">
+                <div class="modal_rotate"></div>
+                <button class="custom_modal_close"><img src="./assets/images/modal_close.svg" alt="x"></button>
+                <div class="custom_modal_body">
+                    <h3>Сниженный автокредит <br>
+                        на Lada от 7%</h3>
+                        <form action="">
+                            <div class="credit_formInfo">
+                                <input type="text" name="" id="" placeholder="Имя">
+                                <input type="tel" name="" id="" placeholder="+ 7 (495) 111-11-11">
+                            </div>
+                            <div class="credit_button">
+                                <a href="#">Купить в кредит</a>
+                            </div>
+                            <div class="credit_checkbox">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Согласие на обработку персональных данных</label>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+        <div class="custom_modal" id="offers_modal">
+            <div class="custom_modal_backdrop"></div>
+            <div class="custom_modal_content">
+                <div class="modal_rotate"></div>
+                <button class="custom_modal_close"><img src="./assets/images/modal_close.svg" alt="x"></button>
+                <div class="custom_modal_body">
+                    <div class="content">
+                        <h3>Оставьте заявку</h3>
+                        <p>и получите выгодное <br>
+                            предложение от Lada </p>
+                    </div>
+                        <form action="">
+                            <div class="credit_formInfo">
+                                <input type="text" name="" id="" placeholder="Имя">
+                                <input type="tel" name="" id="" placeholder="+ 7 (495) 111-11-11">
+                            </div>
+                            <div class="credit_button">
+                                <a href="#">Получить предложение</a>
+                            </div>
+                            <div class="credit_checkbox">
+                                <input type="checkbox" name="" id="">
+                                <label for="">Согласие на обработку персональных данных</label>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+        <div class="custom_modal" id="confirm_modal">
+            <div class="custom_modal_backdrop"></div>
+            <div class="custom_modal_content">
+                <button class="custom_modal_close"><img src="./assets/images/modal_close.svg" alt="x"></button>
+                <div class="custom_modal_body">
+                    <div class="logo">
+                        <img src="./assets/images/Logo.svg" alt="logo">
+                    </div>
+                    <h3>Вы успешно отправили заявку!</h3>
+                    <p>Мы скоро с вами свяжемся.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
+
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
