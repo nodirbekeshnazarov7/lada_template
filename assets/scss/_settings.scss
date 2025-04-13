@@ -172,9 +172,13 @@ html {
 	padding: 0;
 	box-sizing: border-box;
 }
+html{
+	scroll-behavior: smooth;
+}
 body {
 	font-family: "TT Travels";
 	background: #fff;
+	scroll-behavior: smooth;
 }
 .wrapper {
 	overflow: hidden;
