@@ -1,0 +1,95 @@
+.footer{
+    background-color: #4C5865;
+    
+    &_main{
+      padding: 36px 0;
+      ul{
+        display: flex;
+        align-items: center;
+        gap: 45px;
+        li{
+            a{
+                color: #FFF;
+                text-align: justify;
+                font-family: "Open Sans";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-decoration-line: underline;
+                text-decoration-style: solid;
+                text-decoration-skip-ink: none;
+                text-decoration-thickness: auto;
+                text-underline-offset: auto;
+                text-underline-position: from-font;
+                transition: all .3s ease;
+                &:hover{
+                    color: rgb(188, 186, 186);
+                }
+            }
+        }
+      }
+    }
+    &_logo{
+        display: flex;
+        align-items: center;
+        gap: 43px;
+        margin-bottom: 32px;
+        p{
+            color: #FFF;
+            font-family: "Open Sans";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+    &_desc{
+        margin-bottom: 11px;
+        p{
+            text-align: justify;
+            color: #FFF;
+            font-family: "Open Sans";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            max-height: 35px; 
+            overflow: hidden;
+        }
+    }
+    &_link{
+        margin-bottom: 17px;
+        a{
+            color: #FFF;
+            font-family: "Open Sans";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: none;
+            text-decoration-thickness: auto;
+            text-underline-offset: auto;
+            text-underline-position: from-font;
+            transition: all .3s ease;
+            &:hover{
+                color: rgb(188, 186, 186);
+            }
+        }
+    }
+    &_text{
+        margin-bottom: 27px;
+        p{
+            color: #FFF;
+            text-align: justify;
+            font-family: "Open Sans";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+}
