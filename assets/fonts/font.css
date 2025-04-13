@@ -1,5 +1,4 @@
 /* Open Sans */
-
 @font-face {
     font-family: "Open Sans";
     src: url("./OpenSans/OpenSans-Light.ttf");
@@ -34,4 +33,11 @@
     font-family: "Open Sans";
     src: url("./OpenSans/OpenSans-ExtraBold.ttf");
     font-weight: 800;
+}
+
+/* Inter */
+@font-face {
+    font-family: Inter;
+    src: url("./Inter/Inter_18pt-Regular.ttf");
+    font-weight: 400;
 }
