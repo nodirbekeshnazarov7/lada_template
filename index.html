@@ -41,27 +41,49 @@
                                 <span>Адрес</span>
                             </a>
                         </div>
-                        <!-- hamburger_mobile -->
-                        <div class="hamurger_menu d-lg-none">
-                            <a href="#">
-                                <img src="./images/hamburger_menu.png" alt="">
-                            </a>
+
+                        <div class="header_menus_wrapper">
+                            <div class="header_menus_block">
+                                <div class="header_logo container">
+                                    <a href="#" class="logo">
+                                        <img src="./assets/images/Logo.svg" alt="">
+                                    </a>
+                                    <a href="tel:+74951111111" class="phone">
+                                        <img src="./assets/images/phone.svg" alt="phone">
+                                        <span>+7 (495) 111 11-11</span>
+                                    </a>
+                                    <span class="close">
+                                        <img src="./assets/images/close.svg" alt="x">
+                                    </span>
+                                </div>
+                                <ul class="header_menus">
+
+                                    <li><a href="#models">Модельный ряд</a></li>
+                                    <li><a href="#equipment">Комплектации</a></li>
+                                    <li><a href="#credit">Автокредит</a></li>
+                                    <li><a href="#trade">Trade-In</a></li>
+                                    <li><a href="#contact">Контакты</a></li>
+                                    <li class="last_li">
+                                        <a href="#" class="phone_btn">Заказать звонок</a>
+                                        <a href="#" class="map">
+                                            <img src="./assets/images/gold_map.svg" alt="map">
+                                            <span>Адрес</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header_backdrop"></div>
                         </div>
-                        <ul class="header_menus">
-                            <span class="close d-lg-none">
-                                <i class="fs-3 fa-solid fa-xmark"></i>
-                            </span>
-                            <li><a href="#models">Модельный ряд</a></li>
-                            <li><a href="#equipment">Комплектации</a></li>
-                            <li><a href="#credit">Автокредит</a></li>
-                            <li><a href="#trade">Trade-In</a></li>
-                            <li><a href="#contact">Контакты</a></li>
-                            <li class="d-lg-none"><a href="tel:+88005555555" class="phone">8 800 555 55 55</a></li>
-                        </ul>
                         <div class="header_phone">
                             <a href="tel:+74951111111">
                                 <img src="./assets/images/phone.svg" alt="phone">
                                 <span>+7 (495) 111 11-11</span>
+                            </a>
+                        </div>
+                        <!-- hamburger_mobile -->
+                        <div class="hamburger_menu">
+                            <a href="#">
+                                <img src="./assets/images/hamburger_menu.svg" alt="menu">
                             </a>
                         </div>
                     </div>
@@ -160,7 +182,8 @@
                                     <div class="new_cost"><span>цена от </span>659 900 ₽</div>
                                     <div class="credit_cost"><span>в кредит от</span>7 856 ₽ / мес. </div>
                                     <div class="card_btns">
-                                        <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить предложение</a>
+                                        <a href="#" class="get open_custom_modal"
+                                            data-bs-target="#offers_modal">Получить предложение</a>
                                         <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить
                                             в кредит</a>
                                     </div>
@@ -200,7 +223,8 @@
                                     <div class="new_cost"><span>цена от </span>659 900 ₽</div>
                                     <div class="credit_cost"><span>в кредит от</span>7 856 ₽ / мес. </div>
                                     <div class="card_btns">
-                                        <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить предложение</a>
+                                        <a href="#" class="get open_custom_modal"
+                                            data-bs-target="#offers_modal">Получить предложение</a>
                                         <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить
                                             в кредит</a>
                                     </div>
@@ -240,7 +264,8 @@
                                     <div class="new_cost"><span>цена от </span>659 900 ₽</div>
                                     <div class="credit_cost"><span>в кредит от</span>7 856 ₽ / мес. </div>
                                     <div class="card_btns">
-                                        <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить предложение</a>
+                                        <a href="#" class="get open_custom_modal"
+                                            data-bs-target="#offers_modal">Получить предложение</a>
                                         <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить
                                             в кредит</a>
                                     </div>
@@ -373,7 +398,82 @@
                     </div>
                 </div>
             </div>
-
+            <div class="credit_swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="credit_item card1">
+                            <div class="credit_title">
+                                <h3>Кредит</h3>
+                            </div>
+                            <div class="credit_text">
+                                <p>Сниженный автокредит на Lada от 7%</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    Доп. скидка до 70 000₽
+                                    <img src="./assets/images/credit-check.svg" alt="credit-check">
+                                </li>
+                                <li>
+                                    Первоначальный взнос 0₽
+                                    <img src="./assets/images/credit-check.svg" alt="credit-check">
+                                </li>
+                                <li>
+                                    КАСКО и 3 платежа по кредиту в подарок
+                                    <img src="./assets/images/credit-check.svg" alt="credit-check">
+                                </li>
+                            </ul>
+                            <form action="">
+                                <div class="credit_formInfo">
+                                    <input type="text" name="" id="" placeholder="Имя">
+                                    <input type="tel" name="" id="" placeholder="+ 7 (495) 111-11-11">
+                                </div>
+                                <div class="credit_button">
+                                    <a href="#">Рассчитать кредит</a>
+                                </div>
+                                <div class="credit_checkbox">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">
+                                        Нажимая кнопку “Получит предложение” Вы даете согласие на обработку своих <br>
+                                        <a href="#">персональных данных</a>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="credit_item card2">
+                            <div class="credit_title">
+                                <h3>Госпрограмма</h3>
+                            </div>
+                            <div class="credit_text">
+                                <p>Господдержка от Lada со скидкой 25%</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <img src="./assets/images/credit-right-arrow.svg" alt="credit-right-arrow">
+                                    Семейный автомобиль
+                                </li>
+                                <li>
+                                    <img src="./assets/images/credit-right-arrow.svg" alt="credit-right-arrow">
+                                    Первый автомобиль
+                                </li>
+                                <li>
+                                    <img src="./assets/images/credit-right-arrow.svg" alt="credit-right-arrow">
+                                    Работникам медицины
+                                </li>
+                                <li>
+                                    <img src="./assets/images/credit-right-arrow.svg" alt="credit-right-arrow">
+                                    Для участников СВО
+                                </li>
+                            </ul>
+                            <div class="credit_button button">
+                                <a href="#">Получить предложение</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="credit-pagination"></div>
+            </div>
         </section>
 
         <section id="equipment" class="equipment">
@@ -424,8 +524,10 @@
                             <div class="new_cost"><span>цена от </span>659 900 ₽</div>
                             <div class="credit_cost"><span>в кредит от</span>7 856 ₽ / мес. </div>
                             <div class="card_btns">
-                                <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить предложение</a>
-                                <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить в кредит</a>
+                                <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить
+                                    предложение</a>
+                                <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить в
+                                    кредит</a>
                             </div>
                         </div>
                     </div>
@@ -460,8 +562,10 @@
                             <div class="new_cost"><span>цена от </span>659 900 ₽</div>
                             <div class="credit_cost"><span>в кредит от</span>7 856 ₽ / мес. </div>
                             <div class="card_btns">
-                                <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить предложение</a>
-                                <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить в кредит</a>
+                                <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить
+                                    предложение</a>
+                                <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить в
+                                    кредит</a>
                             </div>
                         </div>
                     </div>
@@ -496,8 +600,10 @@
                             <div class="new_cost"><span>цена от </span>659 900 ₽</div>
                             <div class="credit_cost"><span>в кредит от</span>7 856 ₽ / мес. </div>
                             <div class="card_btns">
-                                <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить предложение</a>
-                                <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить в кредит</a>
+                                <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить
+                                    предложение</a>
+                                <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить в
+                                    кредит</a>
                             </div>
                         </div>
                     </div>
@@ -532,8 +638,10 @@
                             <div class="new_cost"><span>цена от </span>659 900 ₽</div>
                             <div class="credit_cost"><span>в кредит от</span>7 856 ₽ / мес. </div>
                             <div class="card_btns">
-                                <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить предложение</a>
-                                <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить в кредит</a>
+                                <a href="#" class="get open_custom_modal" data-bs-target="#offers_modal">Получить
+                                    предложение</a>
+                                <a href="#" class="buy open_custom_modal" data-bs-target="#credit_modal">Купить в
+                                    кредит</a>
                             </div>
                         </div>
                     </div>
@@ -666,19 +774,19 @@
                 <div class="custom_modal_body">
                     <h3>Сниженный автокредит <br>
                         на Lada от 7%</h3>
-                        <form action="">
-                            <div class="credit_formInfo">
-                                <input type="text" name="" id="" placeholder="Имя">
-                                <input type="tel" name="" id="" placeholder="+ 7 (495) 111-11-11">
-                            </div>
-                            <div class="credit_button">
-                                <a href="#">Купить в кредит</a>
-                            </div>
-                            <div class="credit_checkbox">
-                                <input type="checkbox" name="" id="">
-                                <label for="">Согласие на обработку персональных данных</label>
-                            </div>
-                        </form>
+                    <form action="">
+                        <div class="credit_formInfo">
+                            <input type="text" name="" id="" placeholder="Имя">
+                            <input type="tel" name="" id="" placeholder="+ 7 (495) 111-11-11">
+                        </div>
+                        <div class="credit_button">
+                            <a href="#">Купить в кредит</a>
+                        </div>
+                        <div class="credit_checkbox">
+                            <input type="checkbox" name="" id="">
+                            <label for="">Согласие на обработку персональных данных</label>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -693,19 +801,19 @@
                         <p>и получите выгодное <br>
                             предложение от Lada </p>
                     </div>
-                        <form action="">
-                            <div class="credit_formInfo">
-                                <input type="text" name="" id="" placeholder="Имя">
-                                <input type="tel" name="" id="" placeholder="+ 7 (495) 111-11-11">
-                            </div>
-                            <div class="credit_button">
-                                <a href="#">Получить предложение</a>
-                            </div>
-                            <div class="credit_checkbox">
-                                <input type="checkbox" name="" id="">
-                                <label for="">Согласие на обработку персональных данных</label>
-                            </div>
-                        </form>
+                    <form action="">
+                        <div class="credit_formInfo">
+                            <input type="text" name="" id="" placeholder="Имя">
+                            <input type="tel" name="" id="" placeholder="+ 7 (495) 111-11-11">
+                        </div>
+                        <div class="credit_button">
+                            <a href="#">Получить предложение</a>
+                        </div>
+                        <div class="credit_checkbox">
+                            <input type="checkbox" name="" id="">
+                            <label for="">Согласие на обработку персональных данных</label>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

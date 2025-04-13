@@ -1,4 +1,7 @@
 .header{
+    .hamburger_menu{
+        display: none;
+    }
     &_block{
         display: flex;
         // justify-content: space-between;
@@ -41,11 +44,22 @@
         }
 
     }
+    &_menus_block{
+        .header_logo{
+            display: none;
+        }
+    }
     &_menus{
         display: flex;
         align-items: center;
         gap: 38px;
         margin-left: auto;
+        .close{
+            display: none;
+        }
+        .last_li{
+            display: none;
+        }
         a{
             color: #FFF;
             font-family: Inter;
