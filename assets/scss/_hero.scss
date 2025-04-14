@@ -66,6 +66,9 @@
         display: flex;
         justify-content: end;
         width: 100%;
+        &.mobile{
+            display: none;
+        }
         a{
             border-radius: 26px;
             background-color: #FF8743;
