@@ -221,12 +221,15 @@ ul{
 	background: #fff;
 	width: 500px;
 	max-width: 90%;
-	margin: 50px auto;
+	margin: 100px auto;
 	padding: 20px;
-	border-radius: 8px;
+	// border-radius: 8px;
 	z-index: 10000;
 	max-height: 90vh;
 	overflow-y: auto;
+    .modal_mobile_bg{
+        display: none;
+    }
   }
   
   .custom_modal_close {
