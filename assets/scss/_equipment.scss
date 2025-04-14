@@ -165,6 +165,9 @@
             line-height: normal;
             text-transform: lowercase;
             text-wrap: nowrap;
+            .old_cost{
+                display: none;
+            }
             span{
                 color: #4C5865;
                 font-family: "Open Sans";
