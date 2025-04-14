@@ -221,12 +221,15 @@ ul{
 	background: #fff;
 	width: 500px;
 	max-width: 90%;
-	margin: 50px auto;
+	margin: 100px auto;
 	padding: 20px;
-	border-radius: 8px;
+	// border-radius: 8px;
 	z-index: 10000;
 	max-height: 90vh;
 	overflow-y: auto;
+    .modal_mobile_bg{
+        display: none;
+    }
   }
   
   .custom_modal_close {
@@ -373,7 +376,7 @@ ul{
             -webkit-appearance: none;
             width: 10px;
             height: 10px;
-            // border: 1.5px solid #fff;
+            border: none;
             background-color: #9C9C9C;
             border-radius: 2px;
             cursor: pointer;
@@ -537,7 +540,7 @@ ul{
             -webkit-appearance: none;
             width: 10px;
             height: 10px;
-            // border: 1.5px solid #fff;
+            border: none;
             background-color: #9C9C9C;
             border-radius: 2px;
             cursor: pointer;
