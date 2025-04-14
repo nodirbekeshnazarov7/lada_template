@@ -51,9 +51,91 @@ $('.open_custom_modal').on('click', function (e) {
       }, 300);
     }
   });
+  $('.trade form').on('submit', function (e) {
+    e.preventDefault(); // Formani yuborishni to‘xtatamiz
+
+    var $form = $(this);
+    var $inputs = $form.find('input[type="text"], input[type="tel"]');
+    var $checkbox = $form.find('input[type="checkbox"]');
+    var is_valid = true;
+
+    // Inputlar tekshiriladi
+    $inputs.each(function () {
+      if (!$(this).val().trim()) {
+        $(this).addClass('input_error');
+        is_valid = false;
+      } else {
+        $(this).removeClass('input_error');
+      }
+    });
+
+    // Checkbox tekshiriladi
+    if (!$checkbox.prop('checked')) {
+      $checkbox.addClass('input_error');
+      is_valid = false;
+    } else {
+      $checkbox.removeClass('input_error');
+    }
+
+    if (is_valid) {
+      // Hozirgi modalni yopamiz
+      $form.closest('.custom_modal').fadeOut(200);
+      $('body').css('overflow', 'hidden');
+
+      // 300ms kutamiz, keyin confirm_modalni ochamiz
+      setTimeout(function () {
+        $('#confirm_modal').fadeIn(200);
+      }, 300);
+    }
+  });
+  $('.credit form').on('submit', function (e) {
+    e.preventDefault(); // Formani yuborishni to‘xtatamiz
+
+    var $form = $(this);
+    var $inputs = $form.find('input[type="text"], input[type="tel"]');
+    var $checkbox = $form.find('input[type="checkbox"]');
+    var is_valid = true;
+
+    // Inputlar tekshiriladi
+    $inputs.each(function () {
+      if (!$(this).val().trim()) {
+        $(this).addClass('input_error');
+        is_valid = false;
+      } else {
+        $(this).removeClass('input_error');
+      }
+    });
+
+    // Checkbox tekshiriladi
+    if (!$checkbox.prop('checked')) {
+      $checkbox.addClass('input_error');
+      is_valid = false;
+    } else {
+      $checkbox.removeClass('input_error');
+    }
+
+    if (is_valid) {
+      // Hozirgi modalni yopamiz
+      $form.closest('.custom_modal').fadeOut(200);
+      $('body').css('overflow', 'hidden');
+
+      // 300ms kutamiz, keyin confirm_modalni ochamiz
+      setTimeout(function () {
+        $('#confirm_modal').fadeIn(200);
+      }, 300);
+    }
+  });
 
   // A tugmalar o‘rniga form submit qilish
   $('.custom_modal .credit_button a').on('click', function (e) {
+    e.preventDefault();
+    $(this).closest('form').submit();
+  });
+  $('.trade .trade_button a').on('click', function (e) {
+    e.preventDefault();
+    $(this).closest('form').submit();
+  });
+  $('.credit .credit_button a').on('click', function (e) {
     e.preventDefault();
     $(this).closest('form').submit();
   });
