@@ -522,7 +522,7 @@
         z-index: 2;
         &::after{
             content: '';
-            z-index: 999;
+            z-index: 1;
             left: -20px;
             bottom: -1px;
             display: block;
@@ -559,7 +559,7 @@
         content: '';
         left: -20px;
         display: block;
-        height: 0.5px;
+        height: 0.6px;
         width: calc(100% + 40px);
         background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     }
