@@ -280,10 +280,167 @@
         padding: 0 20px;
     }
 
+    // custom modals
+    .custom_modal_content{
+        margin: 50px auto;
+    }
+
+
+    #offers_modal{
+        h3{
+            font-size: 21px;
+        }
+        p{
+            font-size: 14px;
+            line-height: normal;
+            margin-bottom: 23px;
+            br{
+                display: none;
+            }
+        }
+        .modal_rotate{
+            width: 100%;
+            height: 237px;
+            top: unset;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(180deg, rgba(34, 31, 32, 0.00) 0.07%, rgba(34, 31, 32, 0.50) 34.65%, #221F20 100%), linear-gradient(180deg, rgba(56, 68, 81, 0.00) 2.33%, #2E3A47 40.39%);
+        }
+        .custom_modal_content {
+            width: 320px;
+            height: 360px;
+            padding: 12px 20px;
+            background-image: none;
+            .modal_mobile_bg{
+                display: block;
+                position: absolute;
+                width: 100%;
+                // height: 337px;
+                left: 0;
+                top: 0;
+                z-index: -2;
+            }
+        }
+        .custom_modal_body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+        form {
+            align-items: flex-start;
+        }
+        .credit_formInfo{
+            max-width: 100%;
+            flex-direction: row;
+            margin-bottom: 10px;
+            input{
+                padding: 6px 15px;
+                font-size: 11px;
+                margin: 0;
+                &::placeholder{
+                    font-size: 11px;
+                }
+            }
+        }.credit_button{
+            width: 100%;
+            max-width: 100%;
+            a{
+                padding: 8px;
+                font-size: 12px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    } 
+    #credit_modal{
+        h3{
+            font-size: 21px;
+            text-align: left;
+        }
+        p{
+            font-size: 14px;
+            line-height: normal;
+            margin-bottom: 23px;
+            br{
+                display: none;
+            }
+        }
+        .modal_rotate{
+            width: 100%;
+            height: 237px;
+            top: unset;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(180deg, rgba(34, 31, 32, 0.00) 0.07%, rgba(34, 31, 32, 0.50) 34.65%, #221F20 100%), linear-gradient(180deg, rgba(56, 68, 81, 0.00) 2.33%, #2E3A47 40.39%);
+        }
+        .custom_modal_content {
+            width: 320px;
+            height: 360px;
+            padding: 12px 20px;
+            background-image: none;
+            .modal_mobile_bg{
+                display: block;
+                position: absolute;
+                width: 100%;
+                // height: 337px;
+                left: 0;
+                top: 0;
+                z-index: -2;
+            }
+        }
+        .custom_modal_body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+        form{
+            align-items: flex-start;
+        } 
+        .credit_formInfo{
+            max-width: 100%;
+            flex-direction: row;
+            margin-bottom: 10px;
+            input{
+                padding: 6px 15px;
+                font-size: 11px;
+                margin: 0;
+                &::placeholder{
+                    font-size: 11px;
+                }
+            }
+        }.credit_button{
+            width: 100%;
+            max-width: 100%;
+            a{
+                padding: 8px;
+                font-size: 12px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    } 
+
+
     // hero
     .hero{
-        background-position: right center;
         height: 430px;
+        background: url("../images/hero_banner_mobile.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .hero_block {
+        margin-top: 20px;
+        position: relative;
+        z-index: 3;
     }
     .hero_title{
         margin-bottom: 24px;
@@ -312,6 +469,7 @@
     }
     .hero_list li{
         font-size: 15px;
+        line-height: 16px;
         &:nth-child(2){
             order: 3;
         }
@@ -344,12 +502,29 @@
 
 
     // header
+    .header{
+        background-color: #171A1B;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+            height: 243px;
+            background: linear-gradient(180deg, #161616 23.92%, rgba(22, 22, 22, 0.90) 38.23%, rgba(22, 22, 22, 0.70) 54.37%, rgba(22, 22, 22, 0.40) 74.13%, rgba(22, 22, 22, 0.00) 100%);
+        }
+    }
     .header_block{
         padding: 18px 0;
+        position: relative;
+        z-index: 2;
         &::after{
             content: '';
             z-index: 999;
             left: -20px;
+            bottom: -1px;
             display: block;
             height: 0.5px;
             width: calc(100% + 40px); /* yoki 360px */
@@ -422,6 +597,7 @@
     .models .model_card{
         padding: 11px;
         gap: 0;
+        background-image: url("../images/model_card_mobile.png");
     }
     .models .model_card .card_left h3{
         font-size: 26px;
@@ -502,6 +678,7 @@
         position: relative;
         z-index: 1;
         .trade_mobile_bg{
+            width: 100%;
             display: block;
             position: absolute;
             top: 109px;
@@ -541,7 +718,7 @@
 
     }
     .trade_text{
-        margin-bottom: 250px;
+        margin-bottom: 240px;
         p{
             font-size: 18px;
             line-height: normal;
@@ -586,6 +763,9 @@
     }
 
     // credit
+    .credit{
+        margin-top: 20px;
+    }
     .credit .swiper {
         height: 690px;
     }
@@ -594,17 +774,29 @@
     }
     .credit .card1{
         text-align: left;
-        background: url(../images/credit-card1.png);
-        background-position: 8% top;
+        background: none;
+        background-position: center;
         position: relative;
         background-repeat: no-repeat;
         background-size: cover;
+        .card_mobile_bg{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 454px;
+            z-index: -2;
+        }
         &::before{
             content: '';
             position: absolute;
+            height: 320px;
+            width: 100%;
             bottom: 0;
             left: 0;
-            z-index: 0;
+            z-index: -1;
+            background: linear-gradient(180deg, rgba(34, 31, 32, 0.00) 6.11%, rgba(34, 31, 32, 0.50) 29.42%, #221F20 100%), linear-gradient(180deg, rgba(56, 68, 81, 0.00) 11.67%, #2E3A47 22.82%);
         }
     }
     .credit_title h3 {
@@ -655,10 +847,29 @@
     .credit .card2 {
         background: url(../images/credit-card2.png);
         background-position: right -20%;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background: none;
+        .card_mobile_bg{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 454px;
+            z-index: -2;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            height: 320px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background: linear-gradient(180deg, rgba(34, 31, 32, 0.00) 6.11%, rgba(34, 31, 32, 0.50) 29.42%, #221F20 100%), linear-gradient(180deg, rgba(56, 68, 81, 0.00) 11.67%, #2E3A47 22.82%);
+        }
         p{
             margin-bottom: 271px;
+            max-width: 70%;
         }
         ul{
             gap: 11px;

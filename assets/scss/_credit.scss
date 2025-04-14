@@ -14,7 +14,9 @@
         url("../images/credit-card1.png");
         background-size: cover;
         text-align: right;
-        
+        .card_mobile_bg{
+            display: none;
+        }
 
         ul{
             margin-bottom: 29px;
@@ -43,6 +45,9 @@
         background: linear-gradient(270deg, rgba(34, 31, 32, 0.00) 0%, rgba(34, 31, 32, 0.50) 31.93%, #221F20 100%),
         url("../images/credit-card2.png");
         background-size: cover;
+        .card_mobile_bg{
+            display: none;
+        }
         p{
             margin-bottom: 57px;
         }
