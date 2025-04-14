@@ -196,6 +196,10 @@ body {
   background: #fff;
   scroll-behavior: smooth;
 }
+body.no_scroll {
+  overflow: hidden;
+  height: 100vh;
+}
 
 .wrapper {
   overflow: hidden;
@@ -219,6 +223,12 @@ ul {
 }
 
 .custom_modal_backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.header_modal_backdrop {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
@@ -587,6 +597,9 @@ ul {
   line-height: 136.17%; /* 27.234px */
 }
 
+.header .hamburger_menu {
+  display: none;
+}
 .header_block {
   display: flex;
   align-items: center;
@@ -627,11 +640,20 @@ ul {
 .header_logo .map:hover {
   opacity: 0.7;
 }
+.header_menus_block .header_logo {
+  display: none;
+}
 .header_menus {
   display: flex;
   align-items: center;
   gap: 38px;
   margin-left: auto;
+}
+.header_menus .close {
+  display: none;
+}
+.header_menus .last_li {
+  display: none;
 }
 .header_menus a {
   color: #FFF;
@@ -1239,16 +1261,19 @@ ul {
   display: flex;
   gap: 4px;
 }
-.credit_list .card1 {
+.credit .credit_swiper {
+  display: none;
+}
+.credit .card1 {
   width: calc(50% - 2px);
   background: linear-gradient(90deg, rgba(34, 31, 32, 0) 0%, rgba(34, 31, 32, 0.5) 31.93%, #221F20 100%), url("../images/credit-card1.png");
   background-size: cover;
   text-align: right;
 }
-.credit_list .card1 ul {
+.credit .card1 ul {
   margin-bottom: 29px;
 }
-.credit_list .card1 ul li {
+.credit .card1 ul li {
   display: flex;
   align-items: center;
   justify-content: end;
@@ -1261,23 +1286,23 @@ ul {
   font-weight: 400;
   line-height: 20px; /* 111.111% */
 }
-.credit_list .card1 form {
+.credit .card1 form {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.credit_list .card2 {
+.credit .card2 {
   width: calc(50% - 2px);
   background: linear-gradient(270deg, rgba(34, 31, 32, 0) 0%, rgba(34, 31, 32, 0.5) 31.93%, #221F20 100%), url("../images/credit-card2.png");
   background-size: cover;
 }
-.credit_list .card2 p {
+.credit .card2 p {
   margin-bottom: 57px;
 }
-.credit_list .card2 ul {
+.credit .card2 ul {
   margin-bottom: 57px;
 }
-.credit_list .card2 ul li {
+.credit .card2 ul li {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -1291,10 +1316,10 @@ ul {
   font-weight: 700;
   line-height: normal;
 }
-.credit_list .card2 .button {
+.credit .card2 .button {
   max-width: 350px;
 }
-.credit_list .card2 .button a {
+.credit .card2 .button a {
   padding: 16px 61px;
 }
 .credit_item {
@@ -1753,4 +1778,280 @@ ul {
 }
 .contact .contact_card .request_call:hover {
   background-color: #f86a19;
+}
+
+@media (max-width: 1920px) {
+  .container {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  .hero_list ul {
+    gap: 40px;
+  }
+  .header_logo {
+    gap: 15px;
+  }
+  .header_menus {
+    gap: 15px;
+  }
+  .models .tabs_block {
+    width: 80%;
+  }
+  .models .model_card {
+    width: 100%;
+    padding: 15px 44px;
+  }
+  .models .model_card .card_img img {
+    width: 300px;
+  }
+  .credit_button {
+    width: 100%;
+  }
+  .credit_button a {
+    display: inline-block;
+    width: 100%;
+    padding: 16px;
+  }
+  .equipment .card_img img {
+    width: 250px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  .header_logo .map {
+    display: none;
+  }
+  .header_menus_wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 998;
+  }
+  .header_menus_wrapper .header_menus_block {
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    padding: 0 0 20px;
+    background: linear-gradient(270deg, #4C5865 -23.69%, #2E3A47 74.77%);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  .header_menus_wrapper .header_menus_block .header_logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 27px 0;
+    position: relative;
+  }
+  .header_menus_wrapper .header_menus_block .header_logo::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFF 26.94%, #FFF 71.22%, rgba(255, 255, 255, 0) 100%);
+  }
+  .header_menus_wrapper .header_menus_block .header_logo .map {
+    display: none;
+  }
+  .header_menus_wrapper .header_menus_block .header_logo .phone {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #FFF;
+    font-family: "Open Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 235.609%; /* 28.273px */
+    text-transform: uppercase;
+  }
+  .header_menus_wrapper .header_backdrop {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  .header_menus_wrapper.active {
+    pointer-events: auto;
+  }
+  .header_menus_wrapper.active .header_menus_block {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .header_menus_wrapper.active .header_backdrop {
+    opacity: 1;
+  }
+  .header_block {
+    justify-content: space-between;
+  }
+  .header .hamburger_menu {
+    display: block;
+  }
+  .header_menus {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 720px;
+    margin: 18px auto;
+  }
+  .header_menus .last_li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+  }
+  .header_menus .last_li .phone_btn {
+    border-radius: 37px;
+    background: #FF8743;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  .hero_list ul {
+    flex-wrap: wrap;
+  }
+  .models .model_card {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .credit_list {
+    display: none;
+  }
+  .credit .credit_swiper {
+    display: block;
+  }
+  .credit .swiper {
+    height: 674px;
+  }
+  .credit .swiper-slide {
+    height: calc(100% - 38px);
+  }
+  .credit .credit_item {
+    height: 100%;
+    width: 100%;
+  }
+  .credit .credit-pagination {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    gap: 10px;
+  }
+  .credit .credit-pagination .swiper-pagination-bullet {
+    border-radius: 26px;
+    width: 80px;
+    height: 8px;
+    background: #222021;
+    opacity: 0.2;
+  }
+  .credit .credit-pagination .swiper-pagination-bullet-active {
+    background: #FF8743;
+    opacity: 1;
+  }
+  .equipment_card {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .equipment_card .card_right {
+    width: 100%;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  .hero_title h1 {
+    font-size: 32px;
+  }
+  .hero_title h2 {
+    font-size: 28px;
+  }
+  .hero_list li {
+    font-size: 20px;
+  }
+  .header_menus {
+    max-width: 540px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .hero {
+    background-position: right center;
+  }
+  .hero_title h1 {
+    font-size: 23px;
+    padding: 0;
+    width: 100%;
+    background: unset;
+    text-align: center;
+  }
+  .hero_title h2 {
+    font-size: 18px;
+    text-align: center;
+    text-transform: lowercase;
+  }
+  .header_block {
+    padding: 18px 0;
+  }
+  .header_block::after {
+    content: "";
+    left: -20px;
+    display: block;
+    height: 0.5px;
+    width: calc(100% + 40px); /* yoki 360px */
+    background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  }
+  .header_logo .logo img {
+    width: 125px;
+  }
+  .header_phone a {
+    font-size: 12px;
+  }
+  .header_phone a img {
+    width: 12px;
+  }
+  .header_menus {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .header_menus a {
+    font-size: 15px;
+  }
+  .header_menus_wrapper .header_menus_block .header_logo {
+    padding: 17px 0;
+  }
+  .header_menus_wrapper .header_menus_block .header_logo::after {
+    content: "";
+    left: -20px;
+    display: block;
+    height: 0.5px;
+    width: calc(100% + 40px); /* yoki 360px */
+    background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -58,6 +58,14 @@ $('.open_custom_modal').on('click', function (e) {
     $(this).closest('form').submit();
   });
 
+//   ============ Credit swiper
+var creditSwiper = new Swiper(".credit_swiper", {
+    spaceBetween: 10,
+    pagination: {
+      el: ".credit-pagination",
+    },
+  });
+
     /** -------------------------------
      *  TABS
      * --------------------------------*/
@@ -145,14 +153,16 @@ $('.open_custom_modal').on('click', function (e) {
     /** -------------------------------
      *  HAMBURGER MENU
      * --------------------------------*/
-    $(".hamurger_menu").on('click', function (e) {
+    $(".hamburger_menu").on('click', function (e) {
         e.preventDefault();
-        $(".header_menus").addClass("active");
+        $(".header_menus_wrapper").addClass("active");
+        $('body').addClass('no_scroll');
     });
 
-    $(".close").on('click', function (e) {
+    $(".header_menus_block .close, .header_backdrop").on('click', function (e) {
         e.preventDefault();
-        $(".header_menus").removeClass("active");
+        $(".header_menus_wrapper").removeClass("active");
+        $('body').removeClass('no_scroll');
     });
 
     /** -------------------------------
