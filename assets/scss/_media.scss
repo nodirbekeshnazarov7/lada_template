@@ -581,15 +581,20 @@
         padding-left: 8px;
         padding-right: 8px;
     }
+    .models .tabs_block .swiper-slide{
+        font-size: 12px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
     
     .models .tabs_block .tab_next{
-        right: -3%;
+        right: -20px;
         img{
             width: 16px;
         }
     }
     .models .tabs_block .tab_prev{
-        left: -3%;
+        left: -20px;
         img{
             width: 16px;
         }
@@ -763,7 +768,7 @@
     }
 
     .credit{
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .credit .swiper {
         height: 690px;
@@ -895,6 +900,12 @@
         padding: 12px;
     }
 
+    section.trade, section.credit{
+        display: none;
+    }
+    .accordion {
+        display: block;
+        }
     // equipment
     .equipment {
         h2{
@@ -907,64 +918,13 @@
             }
         }
         .equipment_filters{
-            display: flex;
             gap: 8px;
-            justify-content: center;
         }
-        .custom-select-wrapper {
-            position: relative;
-            width: 280px;
-            border-radius: 26px;
-            border: 1px solid rgba(76, 88, 101, 0.26);
-            color: #4C5865;
-            font-family: "Open Sans";
+        .custom-select-wrapper{
             font-size: 13px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
         }
         
-        .custom-selected {
-            padding: 12px;
-            cursor: pointer;
-            position: relative;
-            background-color: #fff;
-            border-radius: 26px;
-            border: 1px solid rgba(76, 88, 101, 0.26);
-        }
-        
-        .custom-selected .arrow {
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            transition: transform 0.3s ease;
-        }
-        
-        .custom-select-dropdown {
-            display: none;
-            border: 1px solid #ccc;
-            position: absolute;
-            width: 100%;
-            background: #fff;
-            z-index: 999;
-            max-height: 200px;
-            overflow-y: auto;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-radius: 26px;
-        }
-        
-        .custom-select-wrapper.open .custom-select-dropdown {
-            display: block;
-        }
-        
-        .custom-select-dropdown .search {
-            width: 100%;
-            padding: 12px 15px;
-            border: none;
-            border-bottom: 1px solid #ccc;
-            box-sizing: border-box;
-            outline: none;
-        }
+      
 
         &_card{
             padding: 24px 20px 19px;
@@ -1054,6 +1014,9 @@
             .map_wrapper{
                 height: 329px;
                 width: 100%;
+                .map_pin{
+                    width: 37px;
+                }
             }
             iframe{
                 width: 100%;
