@@ -216,6 +216,175 @@ ul {
   list-style: none;
 }
 
+.accordion-item.trade {
+  overflow: hidden;
+}
+.accordion-item.trade .trade_text {
+  margin: 0;
+}
+.accordion-item.trade .card_mobile_bg {
+  display: block;
+  position: absolute;
+  top: -50px;
+  left: unset;
+  right: 0;
+  z-index: -2;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.accordion-item.trade .card_mobile_bg img {
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.accordion-item.trade::after {
+  display: none;
+}
+.accordion-item.trade .trade_main {
+  padding: 0;
+}
+.accordion-item .accordion-box {
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.accordion-item .accordion-box.credit_item {
+  padding: 20px;
+}
+.accordion-item .accordion-box.card2 {
+  overflow: hidden;
+}
+.accordion-item .accordion-box.card2::before {
+  content: "";
+  background: linear-gradient(331deg, rgba(63, 78, 88, 0) 3.6%, #35444E 59.27%);
+  height: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.accordion-item .accordion-box.card2 p {
+  margin: 0;
+  -webkit-transition: margin-bottom 0.3s ease;
+  transition: margin-bottom 0.3s ease;
+}
+.accordion-item .accordion-box.card2 .card_mobile_bg {
+  display: block;
+  position: absolute;
+  top: -50px;
+  left: unset;
+  right: 0;
+  z-index: -2;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.accordion-item .accordion-box.card2 .card_mobile_bg img {
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.accordion-item .accordion-box.card1 {
+  overflow: hidden;
+}
+.accordion-item .accordion-box.card1::before {
+  content: "";
+  background: none;
+  height: 150%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.accordion-item .accordion-box.card1 p {
+  margin: 0;
+  max-width: 80%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.accordion-item .accordion-box.card1 .card_mobile_bg {
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: -2;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 150%;
+}
+.accordion-item .accordion-box.card1 .card_mobile_bg img {
+  width: 170%;
+  height: auto;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.accordion-item .accordion-box.show.card2 p {
+  margin-bottom: 271px;
+}
+.accordion-item .accordion-box.show.card2 .card_mobile_bg {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 200%;
+  height: 454px;
+  z-index: -2;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.accordion-item .accordion-box.show.card2 .card_mobile_bg img {
+  position: relative;
+  width: 100%;
+  right: 0;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  z-index: 0;
+}
+.accordion-item .accordion-box.show.card1 p {
+  margin-bottom: 230px;
+  max-width: 100%;
+}
+.accordion-item .accordion-box.show.card1 .card_mobile_bg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 150%;
+  height: 454px;
+  z-index: -2;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.accordion-item .accordion-box.show.card1 .card_mobile_bg img {
+  position: relative;
+  width: 140%;
+  right: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+.accordion-item .accordion-box.show::before {
+  content: "";
+  height: 320px;
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(6.11%, rgba(34, 31, 32, 0)), color-stop(29.42%, rgba(34, 31, 32, 0.5)), to(#221F20)), -webkit-gradient(linear, left top, left bottom, color-stop(11.67%, rgba(56, 68, 81, 0)), color-stop(22.82%, #2E3A47));
+  background: linear-gradient(180deg, rgba(34, 31, 32, 0) 6.11%, rgba(34, 31, 32, 0.5) 29.42%, #221F20 100%), linear-gradient(180deg, rgba(56, 68, 81, 0) 11.67%, #2E3A47 22.82%);
+}
+
+.accordion-header {
+  position: relative;
+}
+
+.accordion-plus {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+
+.accordion-content {
+  display: none;
+}
+
 .custom_modal {
   display: none;
   position: fixed;
@@ -342,7 +511,8 @@ ul {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150.7%; /* 22.605px */
+  line-height: 150.7%;
+  /* 22.605px */
 }
 #credit_modal .credit_formInfo input::-webkit-input-placeholder {
   color: #FFF;
@@ -350,7 +520,8 @@ ul {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150.7%; /* 22.605px */
+  line-height: 150.7%;
+  /* 22.605px */
 }
 #credit_modal .credit_formInfo input::-moz-placeholder {
   color: #FFF;
@@ -358,7 +529,8 @@ ul {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150.7%; /* 22.605px */
+  line-height: 150.7%;
+  /* 22.605px */
 }
 #credit_modal .credit_formInfo input:-ms-input-placeholder {
   color: #FFF;
@@ -366,7 +538,8 @@ ul {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150.7%; /* 22.605px */
+  line-height: 150.7%;
+  /* 22.605px */
 }
 #credit_modal .credit_formInfo input::-ms-input-placeholder {
   color: #FFF;
@@ -374,7 +547,8 @@ ul {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150.7%; /* 22.605px */
+  line-height: 150.7%;
+  /* 22.605px */
 }
 #credit_modal .credit_formInfo input::placeholder {
   color: #FFF;
@@ -382,7 +556,8 @@ ul {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150.7%; /* 22.605px */
+  line-height: 150.7%;
+  /* 22.605px */
 }
 #credit_modal .credit_formInfo input:focus {
   opacity: 1;
@@ -467,7 +642,8 @@ ul {
   height: 4.5px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("../images/checkbox-check.svg"); /* <- BU YERDA O‘ZINGIZ XOHlAGAN RASM URL sini qo‘ying */
+  background-image: url("../images/checkbox-check.svg");
+  /* <- BU YERDA O‘ZINGIZ XOHlAGAN RASM URL sini qo‘ying */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -540,7 +716,8 @@ ul {
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 24px; /* 120% */
+  line-height: 24px;
+  /* 120% */
 }
 #offers_modal .credit_formInfo {
   max-width: 254px;
@@ -559,7 +736,8 @@ ul {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150.7%; /* 22.605px */
+  line-height: 150.7%;
+  /* 22.605px */
 }
 #offers_modal .credit_formInfo input::-webkit-input-placeholder {
   color: #FFF;
@@ -567,7 +745,8 @@ ul {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150.7%; /* 22.605px */
+  line-height: 150.7%;
+  /* 22.605px */
 }
 #offers_modal .credit_formInfo input::-moz-placeholder {
   color: #FFF;
@@ -575,7 +754,8 @@ ul {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150.7%; /* 22.605px */
+  line-height: 150.7%;
+  /* 22.605px */
 }
 #offers_modal .credit_formInfo input:-ms-input-placeholder {
   color: #FFF;
@@ -583,7 +763,8 @@ ul {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150.7%; /* 22.605px */
+  line-height: 150.7%;
+  /* 22.605px */
 }
 #offers_modal .credit_formInfo input::-ms-input-placeholder {
   color: #FFF;
@@ -591,7 +772,8 @@ ul {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150.7%; /* 22.605px */
+  line-height: 150.7%;
+  /* 22.605px */
 }
 #offers_modal .credit_formInfo input::placeholder {
   color: #FFF;
@@ -599,7 +781,8 @@ ul {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 150.7%; /* 22.605px */
+  line-height: 150.7%;
+  /* 22.605px */
 }
 #offers_modal .credit_formInfo input:focus {
   opacity: 1;
@@ -684,7 +867,8 @@ ul {
   height: 4.5px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("../images/checkbox-check.svg"); /* <- BU YERDA O‘ZINGIZ XOHlAGAN RASM URL sini qo‘ying */
+  background-image: url("../images/checkbox-check.svg");
+  /* <- BU YERDA O‘ZINGIZ XOHlAGAN RASM URL sini qo‘ying */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -712,7 +896,8 @@ ul {
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
-  line-height: 136.17%; /* 38.128px */
+  line-height: 136.17%;
+  /* 38.128px */
   margin-bottom: 16px;
 }
 #confirm_modal p {
@@ -722,7 +907,8 @@ ul {
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 136.17%; /* 27.234px */
+  line-height: 136.17%;
+  /* 27.234px */
 }
 
 .header .hamburger_menu {
@@ -3017,7 +3203,14 @@ ul {
   .credit .swiper {
     height: 690px;
   }
+  .credit .credit_box {
+    height: 690px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .credit .credit_item {
+    width: 100%;
     padding: 20px;
   }
   .credit .card1 {
@@ -3027,6 +3220,7 @@ ul {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: 0;
   }
   .credit .card1 .card_mobile_bg {
     display: block;
@@ -3105,6 +3299,8 @@ ul {
     background: url(../images/credit-card2.png);
     background-position: right -20%;
     background: none;
+    position: relative;
+    z-index: 0;
   }
   .credit .card2 .card_mobile_bg {
     display: block;

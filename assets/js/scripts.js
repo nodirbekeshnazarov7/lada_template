@@ -1,4 +1,25 @@
 $(document).ready(function () {
+  // accordion
+  $('.accordion-header').on('click', function () {
+    var $item = $(this).closest('.accordion-item');
+    var $content = $item.find('.accordion-content');
+    let $box = $item.find('.accordion-box');
+    if($box.hasClass('show')){
+      $item.removeClass('active');
+      $box.removeClass('show');
+    }
+    else{
+      $box.addClass('show');
+      $item.addClass('active');
+    }
+  
+    $('.accordion-content').not($content).slideUp();
+    $content.slideToggle();
+  });
+  
+
+
+
 // Modal ochish
 $('.open_custom_modal').on('click', function (e) {
     e.preventDefault();
