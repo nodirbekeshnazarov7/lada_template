@@ -762,14 +762,18 @@
         }
     }
 
-    // credit
     .credit{
         margin-top: 20px;
     }
     .credit .swiper {
         height: 690px;
     }
+    .credit .credit_box {
+        height: 690px;
+        display: flex;
+    }
     .credit .credit_item{
+        width: 100%;
         padding: 20px;
     }
     .credit .card1{
@@ -779,6 +783,7 @@
         position: relative;
         background-repeat: no-repeat;
         background-size: cover;
+        z-index: 0;
         .card_mobile_bg{
             display: block;
             position: absolute;
@@ -848,6 +853,8 @@
         background: url(../images/credit-card2.png);
         background-position: right -20%;
         background: none;
+        position: relative;
+        z-index: 0;
         .card_mobile_bg{
             display: block;
             position: absolute;
