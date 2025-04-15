@@ -1,20 +1,25 @@
 $(document).ready(function () {
   // accordion
   $('.accordion-header').on('click', function () {
-    var $item = $(this).closest('.accordion-item');
-    var $content = $item.find('.accordion-content');
-    let $box = $item.find('.accordion-box');
-    if($box.hasClass('show')){
+    const $item = $(this).closest('.accordion-item');
+    const $content = $item.find('.accordion-content');
+    const $box = $item.find('.accordion-box');
+  
+    // Agar hozirgi item ochiq bo‘lsa - yopamiz
+    if ($item.hasClass('active')) {
       $item.removeClass('active');
       $box.removeClass('show');
-    }
-    else{
-      $box.addClass('show');
-      $item.addClass('active');
-    }
+      $content.stop(true, true).slideUp(); // stop() orqali animatsiyani to‘xtatamiz
+    } else {
+      // Boshqa barcha accordionlarni yopamiz
+      $('.accordion-item.active').removeClass('active').find('.accordion-box').removeClass('show');
+      $('.accordion-content').stop(true, true).slideUp();
   
-    $('.accordion-content').not($content).slideUp();
-    $content.slideToggle();
+      // Faol itemga class beramiz va ochamiz
+      $item.addClass('active');
+      $box.addClass('show');
+      $content.stop(true, true).slideDown();
+    }
   });
   
 
@@ -177,68 +182,82 @@ var creditSwiper = new Swiper(".credit_swiper", {
 
 
     if ($tabsContainer.length) {
-        const $tabsWrapper = $tabsContainer.find('.tabs');
-        const $tabs = $tabsWrapper.find('li');
+        const $tabsWrapper = $tabsContainer.find('.tabs_swiper');
+        const $tabs = $tabsWrapper.find('.swiper-slide');
         const $tabContents = $('.tab_content');
 
-        let containerWidth = $tabsContainer.width();
-        let tabWidths = [];
-        let visibleStart = 0;
-
-        $tabs.each(function () {
-            tabWidths.push(this.getBoundingClientRect().width);
+        var tabs_swiper = new Swiper(".tabs_swiper", {
+          slidesPerView: "auto",
+          spaceBetween: 15,
+          navigation: {
+            nextEl: ".tab_next",
+            prevEl: ".tab_prev",
+          },
+          breakpoints:{
+            576:{
+              spaceBetween: 37,
+            }
+          }
         });
 
-        function showTabs(startIndex) {
-            $tabs.hide();
-            let totalWidth = 0;
-            let endIndex = startIndex;
+        // let containerWidth = $tabsContainer.width();
+        // let tabWidths = [];
+        // let visibleStart = 0;
 
-            for (let i = startIndex; i < $tabs.length; i++) {
-                totalWidth += tabWidths[i];
-                if (totalWidth <= containerWidth) {
-                    $tabs.eq(i).show();
-                    endIndex = i;
-                } else {
-                    break;
-                }
-            }
+        // $tabs.each(function () {
+        //     tabWidths.push(this.getBoundingClientRect().width);
+        // });
 
-            visibleStart = startIndex;
-            $('.tab_prev').toggle(visibleStart > 0);
-            $('.tab_next').toggle(endIndex < $tabs.length - 1);
-        }
+        // function showTabs(startIndex) {
+        //     $tabs.hide();
+        //     let totalWidth = 0;
+        //     let endIndex = startIndex;
 
-        $('.tab_next').on('click', function () {
-            let nextStart = visibleStart;
-            let total = 0;
+        //     for (let i = startIndex; i < $tabs.length; i++) {
+        //         totalWidth += tabWidths[i];
+        //         if (totalWidth <= containerWidth) {
+        //             $tabs.eq(i).show();
+        //             endIndex = i;
+        //         } else {
+        //             break;
+        //         }
+        //     }
 
-            for (let i = visibleStart; i < $tabs.length; i++) {
-                total += tabWidths[i];
-                if (total > containerWidth) {
-                    nextStart = i;
-                    break;
-                }
-            }
+        //     visibleStart = startIndex;
+        //     $('.tab_prev').toggle(visibleStart > 0);
+        //     $('.tab_next').toggle(endIndex < $tabs.length - 1);
+        // }
 
-            showTabs(nextStart);
-        });
+        // $('.tab_next').on('click', function () {
+        //     let nextStart = visibleStart;
+        //     let total = 0;
 
-        $('.tab_prev').on('click', function () {
-            let prevStart = 0;
-            let total = 0;
+        //     for (let i = visibleStart; i < $tabs.length; i++) {
+        //         total += tabWidths[i];
+        //         if (total > containerWidth) {
+        //             nextStart = i;
+        //             break;
+        //         }
+        //     }
 
-            for (let i = visibleStart - 1; i >= 0; i--) {
-                total += tabWidths[i];
-                if (total > containerWidth) {
-                    prevStart = i + 1;
-                    break;
-                }
-                prevStart = i;
-            }
+        //     showTabs(nextStart);
+        // });
 
-            showTabs(prevStart);
-        });
+        // $('.tab_prev').on('click', function () {
+        //     let prevStart = 0;
+        //     let total = 0;
+
+        //     for (let i = visibleStart - 1; i >= 0; i--) {
+        //         total += tabWidths[i];
+        //         if (total > containerWidth) {
+        //             prevStart = i + 1;
+        //             break;
+        //         }
+        //         prevStart = i;
+        //     }
+
+        //     showTabs(prevStart);
+        // });
 
         $tabs.on('click', function () {
             $tabs.removeClass('active');
@@ -250,7 +269,7 @@ var creditSwiper = new Swiper(".credit_swiper", {
         // Init
         $tabs.removeClass('active').eq(0).addClass('active');
         $tabContents.hide().eq(0).show();
-        showTabs(0);
+        // showTabs(0);
     }
 
     /** -------------------------------
@@ -272,65 +291,80 @@ var creditSwiper = new Swiper(".credit_swiper", {
      *  CUSTOM SELECT
      * --------------------------------*/
     function createCustomSelect($select) {
-        const wrapper = $('<div class="custom-select-wrapper"></div>');
-        const firstOptionText = $select.find("option").first().text();
-        const selected = $(`<div class="custom-selected"><span class="text">${firstOptionText}</span><span class="arrow"></span></div>`);
-        const dropdown = $('<div class="custom-select-dropdown"><input type="text" class="search" placeholder="Поиск..."><ul class="options"></ul></div>');
-
-        const svgArrow = `
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+      const wrapper = $('<div class="custom-select-wrapper"></div>');
+  
+      // Birinchi option faqat sarlavha sifatida ishlatiladi
+      const options = $select.find("option");
+      const firstOptionText = options.first().text();
+      const selected = $(`
+          <div class="custom-selected">
+              <span class="text">${firstOptionText}</span>
+              <span class="arrow"></span>
+          </div>
+      `);
+  
+      const dropdown = $('<div class="custom-select-dropdown"><input type="text" class="search" placeholder="Поиск..."><ul class="options"></ul></div>');
+  
+      const svgArrow = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
               <path d="M4.5 6.17554L9 10.2926L13.5 6.17554" stroke="#2B303A" stroke-opacity="0.58" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        `;
-        selected.find(".arrow").html(svgArrow);
-
-        $select.find("option").each(function () {
-            const value = $(this).val();
-            const text = $(this).text();
-            if (text.trim() !== "") {
-                dropdown.find(".options").append(`<li data-value="${value}">${text}</li>`);
-            }
-        });
-
-        wrapper.append(selected).append(dropdown);
-        $select.after(wrapper).hide(); // hide original select
-
-        selected.on("click", function (e) {
-            e.stopPropagation();
-            $(".custom-select-wrapper").not(wrapper).removeClass("open")
-                .find("svg").css("transform", "rotate(0)");
-            wrapper.toggleClass("open");
-            selected.find("svg").css("transform", wrapper.hasClass("open") ? "rotate(180deg)" : "rotate(0)");
-        });
-
-        dropdown.on("click", "li", function () {
-            const text = $(this).text();
-            const value = $(this).data("value");
-            selected.find(".text").text(text);
-            $select.val(value).trigger("change");
-            wrapper.removeClass("open");
-            selected.find("svg").css("transform", "rotate(0)");
-        });
-
-        dropdown.find(".search").on("keyup", function () {
-            const keyword = $(this).val().toLowerCase();
-            dropdown.find("li").each(function () {
-                $(this).toggle($(this).text().toLowerCase().includes(keyword));
-            });
-        });
-
-        $(document).on("click", function (e) {
-            if (!wrapper.is(e.target) && wrapper.has(e.target).length === 0) {
-                wrapper.removeClass("open");
-                selected.find("svg").css("transform", "rotate(0)");
-            }
-        });
-    }
-
-    $("select.custom-select-original").each(function () {
-        createCustomSelect($(this));
-    });
-
+          </svg>
+      `;
+      selected.find(".arrow").html(svgArrow);
+  
+      // Faqat birinchi optiondan keyingi optionlar ko‘rsatiladi
+      options.slice(1).each(function () {
+          const value = $(this).val();
+          const text = $(this).text();
+          if (text.trim() !== "") {
+              dropdown.find(".options").append(`<li data-value="${value}">${text}</li>`);
+          }
+      });
+  
+      wrapper.append(selected).append(dropdown);
+      $select.after(wrapper).hide(); // asl selectni yashirish
+  
+      // select bosilganda ochish/yopish
+      selected.on("click", function (e) {
+          e.stopPropagation();
+          $(".custom-select-wrapper").not(wrapper).removeClass("open")
+              .find("svg").css("transform", "rotate(0)");
+          wrapper.toggleClass("open");
+          selected.find("svg").css("transform", wrapper.hasClass("open") ? "rotate(180deg)" : "rotate(0)");
+      });
+  
+      // option tanlanganda
+      dropdown.on("click", "li", function () {
+          const text = $(this).text();
+          const value = $(this).data("value");
+          selected.find(".text").text(text);
+          $select.val(value).trigger("change");
+          wrapper.removeClass("open");
+          selected.find("svg").css("transform", "rotate(0)");
+      });
+  
+      // qidiruv funksiyasi
+      dropdown.find(".search").on("keyup", function () {
+          const keyword = $(this).val().toLowerCase();
+          dropdown.find("li").each(function () {
+              $(this).toggle($(this).text().toLowerCase().includes(keyword));
+          });
+      });
+  
+      // tashqariga bosilganda yopiladi
+      $(document).on("click", function (e) {
+          if (!wrapper.is(e.target) && wrapper.has(e.target).length === 0) {
+              wrapper.removeClass("open");
+              selected.find("svg").css("transform", "rotate(0)");
+          }
+      });
+  }
+  
+  // Select elementlar uchun custom select yaratish
+  $("select.custom-select-original").each(function () {
+      createCustomSelect($(this));
+  });
+  
 
     // Equipment card show more
     const $equipmentItems = $('.equipment_card');
@@ -369,26 +403,28 @@ var creditSwiper = new Swiper(".credit_swiper", {
         }
     });
 
-    // HTML classlar bilan moslashtirish
     const footerTextElement = document.querySelector('.footer_desc p');
     const toggleTextLink = document.querySelector('.footer_link .show_more');
-
+    
     // To'liq matnni olish
     const fullText = footerTextElement.textContent.trim();
-
+    
     // Maksimal so'zlar soni
-    const maxWords = 30;
-    const words = fullText.split(" ");
-    const shortText = words.slice(0, maxWords).join(" ") + "...";
-
-    // Boshlang'ich matnni qisqartirish
+    const maxWords = 34;
+    
+    // So'zlar ro'yxati (har qanday bo'shliq bo'yicha ajratiladi)
+    const words = fullText.split(/\s+/); 
+    
+    // Qisqartirilgan matn
+    const shortText = words.slice(0, maxWords).join(" ") + (words.length > maxWords ? "..." : "");
+    
     let isFooterExpanded = false;
     footerTextElement.textContent = shortText;
-
+    
     toggleTextLink.addEventListener("click", function (e) {
-        e.preventDefault();  // Linkning normal xatti-harakatini oldini olish
+        e.preventDefault();  
         isFooterExpanded = !isFooterExpanded;
-
+    
         if (isFooterExpanded) {
             footerTextElement.textContent = fullText;
             toggleTextLink.textContent = "Скрыть";
@@ -397,6 +433,7 @@ var creditSwiper = new Swiper(".credit_swiper", {
             toggleTextLink.textContent = "Подробнее";
         }
     });
+    
 
 
 });

@@ -132,24 +132,22 @@
                         <div class="tab_prev">
                             <img src="./assets/images/tab_prev.svg" alt="prev">
                         </div>
-
-                        <div class="tabs_wrapper">
-                            <ul class="tabs">
-                                <!-- 15 ta tab -->
-                                <li data-tab="0" class="active">Lada Granta</li>
-                                <li data-tab="1">Lada Vesta</li>
-                                <li data-tab="2">Lada Largus</li>
-                                <li data-tab="3">Lada Niva Legend</li>
-                                <li data-tab="4">Lada Niva Travel</li>
-                                <li data-tab="5">Aura</li>
-                                <li data-tab="6">Спортивные</li>
-                                <li data-tab="7">Коммерческие</li>
-                            </ul>
-                        </div>
-
                         <div class="tab_next">
                             <img src="./assets/images/tab_next.svg" alt="next">
                         </div>
+                        <div class="tabs_swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Lada Granta</div>
+                                <div class="swiper-slide">Lada Vesta </div>
+                                <div class="swiper-slide">Lada Largus </div>
+                                <div class="swiper-slide">Lada Niva Legend </div>
+                                <div class="swiper-slide">Lada Niva Travel </div>
+                                <div class="swiper-slide">Aura </div>
+                                <div class="swiper-slide">Спортивные </div>
+                                <div class="swiper-slide">Коммерческие </div>
+                            </div>
+                        </div>
+                       
                     </div>
                     <div class="tab_content">
                         <div class="model_cards">
@@ -293,7 +291,7 @@
                 <div class="credit_item accordion-box">
                     <div class="card_mobile_bg">
                         <!-- <img class="" src="./assets/images/credit-card2_mobile.png" alt="card_bg"> -->
-                        <img src="./assets/images/trade_banner.png" alt="card_bg">
+                        <img src="./assets/images/trade_banner1.png" alt="card_bg">
                     </div>
                     <div class="accordion-header">
                         <button class="accordion-plus">
@@ -327,6 +325,25 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <form action="">
+                                    <div class="trade_formInfo">
+                                        <input type="text" name="" id="" placeholder="Имя">
+                                        <input type="tel" name="" id="" placeholder="+ 7 (495) 111-11-11">
+                                    </div>
+                                    <!-- <div class="trade_call">
+                                        <input type="tel" name="" id="" placeholder="+ 7 (495) 111-11-11">
+                                    </div> -->
+                                    <div class="trade_button">
+                                        <a href="#">Получить предложение</a>
+                                    </div>
+                                    <div class="trade_checkbox">
+                                        <input type="checkbox" name="" id="trade_checkbox">
+                                        <label for="trade_checkbox">
+                                            Нажимая кнопку “Получит предложение” Вы даете согласие на обработку своих <br>
+                                            <a href="#">персональных данных</a>
+                                        </label>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -631,13 +648,17 @@
                 <div class="equipment_filters">
                     <select class="custom-select-original" name="model" style="display:none">
                         <option value="">Модель</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
+                        <option value="Granta Седан">Granta Седан</option>
+                        <option value="Granta Лифтбек">Granta Лифтбек</option>
+                        <option value="Granta Сross">Granta Сross</option>
+                        <option value="Vesta седан">Vesta седан</option>
                     </select>
                     <select class="custom-select-original" name="equipment" style="display:none">
                         <option value="">Комплектация</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
+                        <option value="5mT Classic 1.6 л">5mT Classic 1.6 л</option>
+                        <option value="5mT Standard 1.6 л">5mT Standard 1.6 л</option>
+                        <option value="5mT Comfort 1.6 л">5mT Comfort 1.6 л</option>
+                        <option value="5mT Luxe 1.6 л">5mT Luxe 1.6 л</option>
                     </select>
                 </div>
             </div>
@@ -831,6 +852,7 @@
                     </div>
                 </div>
                <div class="map_wrapper">
+                    <img src="./assets/images/map_pin.svg" alt="pin" class="map_pin">
                     <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6962.910068942412!2d37.21410405104592!3d55.627750902283964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5512943980671%3A0x475e98b91047881a!2sLada%2C%20Moscow%20Oblast%2C%20Russia%2C%20143080!5e0!3m2!1sen!2s!4v1744554485360!5m2!1sen!2s"
                     width="1920" height="399" style="border:0;" allowfullscreen="" loading="lazy"
@@ -851,15 +873,7 @@
                             0000000000 от 18 февраля 2019 г., <br>Юр. Адрес: 115114, город Москва</p>
                     </div>
                     <div class="footer_desc">
-                        <p>Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный
-                            характер и ни при каких условиях не является публичной офертой, определяемой положением ч. 2
-                            ст. 437 Гражданского кодекса Российской Федерации.</p>
-                    </div>
-                    <div class="footer_link">
-                        <a href="#" class="show_more">Подробнее</a>
-                    </div>
-                    <div class="footer_text">
-                        <p>
+                                                <p>
                             Обращаем ваше внимание на то, что данный Интернет-сайт носит исключительно информационный
                             характер и ни при каких условиях не является публичной офертой, определяемой положениями
                             Статьи 437 Гражданского кодекса Российской Федерации. Для получения подробной информации о
@@ -901,6 +915,12 @@
                             01.06.2023 и могут быть изменены Банком. Лицензия ЦБ РФ № 3500, г. Москва.
                         </p>
                     </div>
+                    <div class="footer_link">
+                        <a href="#" class="show_more">Подробнее</a>
+                    </div>
+                    <!-- <div class="footer_text">
+
+                    </div> -->
                     <ul>
                         <li>
                             <a href="#">Условия кредитования</a>

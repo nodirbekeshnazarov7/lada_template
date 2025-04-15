@@ -220,35 +220,42 @@ ul {
 
 
 // accordion
-// .accordion {
-//     width: 100%;
-//     max-width: 600px;
-//     margin: 20px auto;
-//     font-family: sans-serif;
-//   }
+.accordion {
+  display: none;
+}
 
 .accordion-item {
 
   &.trade {
     overflow: hidden;
+
     .trade_text {
       margin: 0;
     }
 
     .card_mobile_bg {
+      width: auto;
+      right: -85px;
+      height: 100%;
       display: block;
       position: absolute;
-      top: -50px;
       left: unset;
-      right: 0;
       z-index: -2;
-      transition: all .5s ease;
+      transition: all .2s ease;
+      top: 0;
 
       img {
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 100%;
         transition: all .5s ease;
       }
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(241deg, rgba(63, 78, 88, 0.00) 3.6%, #35444E 59.27%);
     }
 
     &::after {
@@ -257,6 +264,44 @@ ul {
 
     .trade_main {
       padding: 0;
+    }
+
+    &.active {
+      .trade_text {
+        margin-bottom: 208px;
+      }
+
+      .card_mobile_bg {
+        width: auto;
+        right: -209px;
+        height: 299px;
+        display: block;
+        position: absolute;
+        left: unset;
+        z-index: -2;
+        transition: all .5s ease;
+        top: 114px;
+
+        img {
+          width: auto;
+          height: 100%;
+          transition: all .5s ease;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        height: 206px;
+        width: 100%;
+        background: linear-gradient(360deg, rgba(83, 98, 108, 0.00) 0%, #495862 45.34%);
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+      &::after{
+        display: block;
+      }
     }
   }
 
@@ -360,6 +405,12 @@ ul {
             z-index: 0;
           }
         }
+        &::before {
+          content: "";
+          height: 320px;
+          opacity: 1;
+          background: linear-gradient(180deg, rgba(34, 31, 32, 0.00) 6.11%, rgba(34, 31, 32, 0.50) 29.42%, #221F20 100%), linear-gradient(180deg, rgba(56, 68, 81, 0.00) 11.67%, #2E3A47 22.82%);
+        }
       }
 
       &.card1 {
@@ -387,14 +438,15 @@ ul {
             z-index: 0;
           }
         }
+        &::before {
+          content: "";
+          height: 320px;
+          opacity: 1;
+          background: linear-gradient(180deg, rgba(34, 31, 32, 0.00) 6.11%, rgba(34, 31, 32, 0.50) 29.42%, #221F20 100%), linear-gradient(180deg, rgba(56, 68, 81, 0.00) 11.67%, #2E3A47 22.82%);
+        }
       }
 
-      &::before {
-        content: "";
-        height: 320px;
-        opacity: 1;
-        background: linear-gradient(180deg, rgba(34, 31, 32, 0.00) 6.11%, rgba(34, 31, 32, 0.50) 29.42%, #221F20 100%), linear-gradient(180deg, rgba(56, 68, 81, 0.00) 11.67%, #2E3A47 22.82%);
-      }
+
     }
   }
 }

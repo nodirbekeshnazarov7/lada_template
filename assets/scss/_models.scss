@@ -14,7 +14,27 @@
         position: relative;
         width: 66%; // yoki 66% bo'lishi mumkin
         margin: 0 auto;
-    
+        .swiper-slide {
+            width: auto;
+            color: #4C5865;
+            font-family: "Open Sans";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            white-space: nowrap;
+            text-align: center;
+            cursor: pointer;
+            padding-left: 19px;
+            padding-right: 19px;
+            &:first-child{
+                padding-left: 0;
+            }
+            // &:last-child
+            &.active {
+                color: #FF8743;
+            }
+        }
         .tabs_wrapper {
             overflow: hidden;
             width: 100%;
@@ -59,8 +79,8 @@
             }
         }
     
-        .tab_prev { left: -35px; display: none; }
-        .tab_next { right: -35px; display: none; }
+        .tab_prev { left: -37px; display: block; }
+        .tab_next { right: -37px; display: block; }
     }
 
     .model_cards{

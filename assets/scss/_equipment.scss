@@ -26,6 +26,15 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        &.open{
+            border-radius:  26px 26px 0 0;
+            .custom-selected{
+                border-radius:  26px 26px 0 0;
+            }
+        }
+        .search{
+            display: none;
+        }
     }
     
     .custom-selected {
@@ -33,7 +42,7 @@
         cursor: pointer;
         position: relative;
         background-color: #fff;
-        border-radius: 26px;
+        border-radius:  26px;
         border: 1px solid rgba(76, 88, 101, 0.26);
     }
     
@@ -54,7 +63,7 @@
         max-height: 200px;
         overflow-y: auto;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        border-radius: 26px;
+        border-radius: 0 0 26px 26px;
     }
     
     .custom-select-wrapper.open .custom-select-dropdown {
@@ -74,10 +83,14 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 12px 14px;
     }
     
     .custom-select-dropdown li {
-        padding: 15px 15px;
+        padding: 0;
         cursor: pointer;
     }
     
