@@ -1,26 +1,29 @@
 $(document).ready(function () {
   // accordion
-  $('.accordion-header').on('click', function () {
+  function accordionOpen(){
     const $item = $(this).closest('.accordion-item');
     const $content = $item.find('.accordion-content');
     const $box = $item.find('.accordion-box');
   
-    // Agar hozirgi item ochiq bo‘lsa - yopamiz
     if ($item.hasClass('active')) {
       $item.removeClass('active');
       $box.removeClass('show');
-      $content.stop(true, true).slideUp(); // stop() orqali animatsiyani to‘xtatamiz
+      $content.stop(true, true).slideUp();
     } else {
-      // Boshqa barcha accordionlarni yopamiz
       $('.accordion-item.active').removeClass('active').find('.accordion-box').removeClass('show');
       $('.accordion-content').stop(true, true).slideUp();
   
-      // Faol itemga class beramiz va ochamiz
       $item.addClass('active');
       $box.addClass('show');
       $content.stop(true, true).slideDown();
     }
-  });
+  }
+  
+  // CLICK eventni to‘g‘ri bog‘lash
+  $('.accordion-header').on('click', accordionOpen);
+  
+  // Birinchi accordionni avtomatik ochish
+  $('.accordion-header').eq(0).trigger('click');
   
 
 
