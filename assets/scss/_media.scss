@@ -1014,17 +1014,22 @@
             .map_wrapper{
                 height: 329px;
                 width: 100%;
-                .map_pin{
-                    width: 37px;
+                .map{
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    z-index: 0;
                 }
             }
             iframe{
                 width: 100%;
-                height: 100%;
+                height: 229px;
             }
         }
         .contact_card{
+            position: static;
             width: 100%;
+            background: #4C5865;
             .logo{
                 justify-content: start;
             }
