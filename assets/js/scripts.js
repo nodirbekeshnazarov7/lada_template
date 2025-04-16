@@ -193,12 +193,46 @@ var creditSwiper = new Swiper(".credit_swiper", {
             nextEl: ".tab_next",
             prevEl: ".tab_prev",
           },
-          breakpoints:{
-            576:{
+          breakpoints: {
+            576: {
               spaceBetween: 37,
             }
+          },
+          on: {
+            init: function () {
+              updateNavButtons(this);
+            },
+            slideChange: function () {
+              updateNavButtons(this);
+            },
+            reachBeginning: function () {
+              document.querySelector(".tab_prev").style.display = "none";
+            },
+            reachEnd: function () {
+              document.querySelector(".tab_next").style.display = "none";
+            },
+            fromEdge: function () {
+              updateNavButtons(this);
+            },
           }
         });
+        
+        function updateNavButtons(swiper) {
+          const prevBtn = document.querySelector(".tab_prev");
+          const nextBtn = document.querySelector(".tab_next");
+        
+          if (swiper.isBeginning) {
+            prevBtn.style.display = "none";
+          } else {
+            prevBtn.style.display = "block";
+          }
+        
+          if (swiper.isEnd) {
+            nextBtn.style.display = "none";
+          } else {
+            nextBtn.style.display = "block";
+          }
+        }
 
         // let containerWidth = $tabsContainer.width();
         // let tabWidths = [];
