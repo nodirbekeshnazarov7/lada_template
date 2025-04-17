@@ -1,29 +1,26 @@
 $(document).ready(function () {
   // accordion
-  function accordionOpen(){
+  $('.accordion-header').on('click', function () {
     const $item = $(this).closest('.accordion-item');
     const $content = $item.find('.accordion-content');
     const $box = $item.find('.accordion-box');
   
+    // Agar hozirgi item ochiq bo‘lsa - yopamiz
     if ($item.hasClass('active')) {
       $item.removeClass('active');
       $box.removeClass('show');
-      $content.stop(true, true).slideUp();
+      $content.stop(true, true).slideUp(); // stop() orqali animatsiyani to‘xtatamiz
     } else {
+      // Boshqa barcha accordionlarni yopamiz
       $('.accordion-item.active').removeClass('active').find('.accordion-box').removeClass('show');
       $('.accordion-content').stop(true, true).slideUp();
   
+      // Faol itemga class beramiz va ochamiz
       $item.addClass('active');
       $box.addClass('show');
       $content.stop(true, true).slideDown();
     }
-  }
-  
-  // CLICK eventni to‘g‘ri bog‘lash
-  $('.accordion-header').on('click', accordionOpen);
-  
-  // Birinchi accordionni avtomatik ochish
-  $('.accordion-header').eq(0).trigger('click');
+  });
   
 
 
@@ -440,34 +437,30 @@ var creditSwiper = new Swiper(".credit_swiper", {
         }
     });
 
-    const footerTextElement = document.querySelector('.footer_desc p');
-    const toggleTextLink = document.querySelector('.footer_link .show_more');
+    const $footerTextElement = $('.footer_desc p');
+    const $toggleTextLink = $('.footer_link .show_more');
     
-    // To'liq matnni olish
-    const fullText = footerTextElement.textContent.trim();
-    
-    // Maksimal so'zlar soni
-    const maxWords = 34;
-    
-    // So'zlar ro'yxati (har qanday bo'shliq bo'yicha ajratiladi)
-    const words = fullText.split(/\s+/); 
-    
-    // Qisqartirilgan matn
-    const shortText = words.slice(0, maxWords).join(" ") + (words.length > maxWords ? "..." : "");
+    const fullText = $footerTextElement.text().trim();
+    const sentenceEndRegex = /.*?[.!?](?=\s+[А-ЯA-Z])/s;
+    const match = fullText.match(sentenceEndRegex);
+    const shortText = match ? match[0] : fullText;
     
     let isFooterExpanded = false;
-    footerTextElement.textContent = shortText;
     
-    toggleTextLink.addEventListener("click", function (e) {
-        e.preventDefault();  
+    // Boshlang'ich holatda faqat qisqa matnni ko'rsatish
+    $footerTextElement.text(shortText);
+    
+    // Tugma bosilganda matnni o'zgartirish
+    $toggleTextLink.on('click', function (e) {
+        e.preventDefault();
         isFooterExpanded = !isFooterExpanded;
     
         if (isFooterExpanded) {
-            footerTextElement.textContent = fullText;
-            toggleTextLink.textContent = "Скрыть";
+            $footerTextElement.text(fullText); // To'liq matnni ko'rsatish
+            $toggleTextLink.text("Скрыть"); // Tugmani "Скрыть" ga o'zgartirish
         } else {
-            footerTextElement.textContent = shortText;
-            toggleTextLink.textContent = "Подробнее";
+            $footerTextElement.text(shortText); // Qisqa matnni qaytarish
+            $toggleTextLink.text("Подробнее"); // Tugmani "Подробнее" ga o'zgartirish
         }
     });
     
