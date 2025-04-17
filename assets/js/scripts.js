@@ -1,29 +1,26 @@
 $(document).ready(function () {
   // accordion
-  function accordionOpen(){
+  $('.accordion-header').on('click', function () {
     const $item = $(this).closest('.accordion-item');
     const $content = $item.find('.accordion-content');
     const $box = $item.find('.accordion-box');
   
+    // Agar hozirgi item ochiq bo‘lsa - yopamiz
     if ($item.hasClass('active')) {
       $item.removeClass('active');
       $box.removeClass('show');
-      $content.stop(true, true).slideUp();
+      $content.stop(true, true).slideUp(); // stop() orqali animatsiyani to‘xtatamiz
     } else {
+      // Boshqa barcha accordionlarni yopamiz
       $('.accordion-item.active').removeClass('active').find('.accordion-box').removeClass('show');
       $('.accordion-content').stop(true, true).slideUp();
   
+      // Faol itemga class beramiz va ochamiz
       $item.addClass('active');
       $box.addClass('show');
       $content.stop(true, true).slideDown();
     }
-  }
-  
-  // CLICK eventni to‘g‘ri bog‘lash
-  $('.accordion-header').on('click', accordionOpen);
-  
-  // Birinchi accordionni avtomatik ochish
-  $('.accordion-header').eq(0).trigger('click');
+  });
   
 
 
@@ -450,43 +447,20 @@ var creditSwiper = new Swiper(".credit_swiper", {
     
     let isFooterExpanded = false;
     
-    // Wrap text in a div only once
-    $footerTextElement.wrap("<div class='footer_wrapper' style='overflow:hidden'></div>");
-    const $wrapper = $('.footer_wrapper');
-    const $paragraph = $wrapper.find('p');
+    // Boshlang'ich holatda faqat qisqa matnni ko'rsatish
+    $footerTextElement.text(shortText);
     
-    // Create a temporary element to calculate heights
-    const $temp = $('<p>').css({
-        position: 'absolute',
-        visibility: 'hidden',
-        height: 'auto',
-        width: $paragraph.width(),
-        'white-space': 'normal'
-    }).appendTo('body');
-    
-    $temp.text(shortText);
-    const shortHeight = $temp.outerHeight();
-    
-    $temp.text(fullText);
-    const fullHeight = $temp.outerHeight();
-    $temp.remove();
-    
-    $paragraph.text(shortText);
-    $wrapper.height(shortHeight);
-    
+    // Tugma bosilganda matnni o'zgartirish
     $toggleTextLink.on('click', function (e) {
         e.preventDefault();
         isFooterExpanded = !isFooterExpanded;
     
         if (isFooterExpanded) {
-            $paragraph.text(fullText);
-            $wrapper.stop().animate({ height: fullHeight - 40 }, 300);
-            $toggleTextLink.text("Скрыть");
+            $footerTextElement.text(fullText); // To'liq matnni ko'rsatish
+            $toggleTextLink.text("Скрыть"); // Tugmani "Скрыть" ga o'zgartirish
         } else {
-            $wrapper.stop().animate({ height: shortHeight }, 300, function () {
-                $paragraph.text(shortText);
-            });
-            $toggleTextLink.text("Подробнее");
+            $footerTextElement.text(shortText); // Qisqa matnni qaytarish
+            $toggleTextLink.text("Подробнее"); // Tugmani "Подробнее" ga o'zgartirish
         }
     });
     
