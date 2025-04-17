@@ -437,34 +437,53 @@ var creditSwiper = new Swiper(".credit_swiper", {
         }
     });
 
-    const footerTextElement = document.querySelector('.footer_desc p');
-    const toggleTextLink = document.querySelector('.footer_link .show_more');
+    const $footerTextElement = $('.footer_desc p');
+    const $toggleTextLink = $('.footer_link .show_more');
     
-    // To'liq matnni olish
-    const fullText = footerTextElement.textContent.trim();
-    
-    // Maksimal so'zlar soni
-    const maxWords = 34;
-    
-    // So'zlar ro'yxati (har qanday bo'shliq bo'yicha ajratiladi)
-    const words = fullText.split(/\s+/); 
-    
-    // Qisqartirilgan matn
-    const shortText = words.slice(0, maxWords).join(" ") + (words.length > maxWords ? "..." : "");
+    const fullText = $footerTextElement.text().trim();
+    const sentenceEndRegex = /.*?[.!?](?=\s+[А-ЯA-Z])/s;
+    const match = fullText.match(sentenceEndRegex);
+    const shortText = match ? match[0] : fullText;
     
     let isFooterExpanded = false;
-    footerTextElement.textContent = shortText;
     
-    toggleTextLink.addEventListener("click", function (e) {
-        e.preventDefault();  
+    // Wrap text in a div only once
+    $footerTextElement.wrap("<div class='footer_wrapper' style='overflow:hidden'></div>");
+    const $wrapper = $('.footer_wrapper');
+    const $paragraph = $wrapper.find('p');
+    
+    // Create a temporary element to calculate heights
+    const $temp = $('<p>').css({
+        position: 'absolute',
+        visibility: 'hidden',
+        height: 'auto',
+        width: $paragraph.width(),
+        'white-space': 'normal'
+    }).appendTo('body');
+    
+    $temp.text(shortText);
+    const shortHeight = $temp.outerHeight();
+    
+    $temp.text(fullText);
+    const fullHeight = $temp.outerHeight();
+    $temp.remove();
+    
+    $paragraph.text(shortText);
+    $wrapper.height(shortHeight);
+    
+    $toggleTextLink.on('click', function (e) {
+        e.preventDefault();
         isFooterExpanded = !isFooterExpanded;
     
         if (isFooterExpanded) {
-            footerTextElement.textContent = fullText;
-            toggleTextLink.textContent = "Скрыть";
+            $paragraph.text(fullText);
+            $wrapper.stop().animate({ height: fullHeight - 40 }, 300);
+            $toggleTextLink.text("Скрыть");
         } else {
-            footerTextElement.textContent = shortText;
-            toggleTextLink.textContent = "Подробнее";
+            $wrapper.stop().animate({ height: shortHeight }, 300, function () {
+                $paragraph.text(shortText);
+            });
+            $toggleTextLink.text("Подробнее");
         }
     });
     
