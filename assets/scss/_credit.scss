@@ -137,6 +137,9 @@
         max-width: 430px;
         margin-bottom: 9px;
         a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             border-radius: 26px;
             background: #FF8743;
