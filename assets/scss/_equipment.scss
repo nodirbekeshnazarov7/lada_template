@@ -19,7 +19,7 @@
         position: relative;
         width: 280px;
         border-radius: 26px;
-        border: 1px solid rgba(76, 88, 101, 0.26);
+        // border: 1px solid rgba(76, 88, 101, 0.26);
         color: #4C5865;
         font-family: "Open Sans";
         font-size: 15px;
@@ -32,9 +32,9 @@
                 border-radius:  26px 26px 0 0;
             }
         }
-        .search{
-            display: none;
-        }
+        // .search{
+        //     display: none;
+        // }
     }
     
     .custom-selected {
@@ -49,20 +49,22 @@
     .custom-selected .arrow {
         position: absolute;
         right: 10px;
-        top: 10px;
+        // top: 10px;
+        top: 14px;
         transition: transform 0.3s ease;
     }
     
     .custom-select-dropdown {
         display: none;
         border: 1px solid #ccc;
+        border-top: none;
         position: absolute;
         width: 100%;
         background: #fff;
         z-index: 999;
         max-height: 200px;
         overflow-y: auto;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        // box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         border-radius: 0 0 26px 26px;
     }
     
@@ -108,9 +110,10 @@
         background-size: cover;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        // justify-content: space-between;
         padding: 20px 42px;
         .card_left{
+            margin: 0 auto 0 20px;
             h3{
                 color: #4C5865;
                 font-family: "Open Sans";
@@ -135,12 +138,17 @@
                 gap: 13px 0;
             }
             li{
+                display: flex;
+                align-items: center;
                 color: #4C5865;
                 font-family: "Open Sans";
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 24px; /* 150% */
+                .img_box{
+                    width: 35px;
+                }
             }
         }
         .card_right{

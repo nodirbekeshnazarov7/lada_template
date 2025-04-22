@@ -188,14 +188,9 @@ html::-webkit-scrollbar-thumb {
           box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "TT Travels";
   background: #fff;
-  scroll-behavior: smooth;
 }
 body.no_scroll {
   overflow: hidden;
@@ -222,6 +217,9 @@ ul {
 
 .accordion-item.trade {
   overflow: hidden;
+}
+.accordion-item.trade .container {
+  padding: 0;
 }
 .accordion-item.trade .trade_text {
   margin: 0;
@@ -257,7 +255,7 @@ ul {
   padding: 0;
 }
 .accordion-item.trade.active .trade_text {
-  margin-bottom: 208px;
+  margin-bottom: 255px;
 }
 .accordion-item.trade.active .card_mobile_bg {
   width: auto;
@@ -301,6 +299,9 @@ ul {
 }
 .accordion-item .accordion-box.card2 {
   overflow: hidden;
+}
+.accordion-item .accordion-box.card2 ul {
+  margin-bottom: 29px;
 }
 .accordion-item .accordion-box.card2::before {
   content: "";
@@ -2001,6 +2002,15 @@ ul {
   margin-bottom: 9px;
 }
 .credit_button a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   border-radius: 26px;
   background: #FF8743;
@@ -2105,7 +2115,6 @@ ul {
   position: relative;
   width: 280px;
   border-radius: 26px;
-  border: 1px solid rgba(76, 88, 101, 0.26);
   color: #4C5865;
   font-family: "Open Sans";
   font-size: 15px;
@@ -2119,9 +2128,6 @@ ul {
 .equipment .custom-select-wrapper.open .custom-selected {
   border-radius: 26px 26px 0 0;
 }
-.equipment .custom-select-wrapper .search {
-  display: none;
-}
 .equipment .custom-selected {
   padding: 12px;
   cursor: pointer;
@@ -2133,7 +2139,7 @@ ul {
 .equipment .custom-selected .arrow {
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 14px;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
@@ -2142,14 +2148,13 @@ ul {
 .equipment .custom-select-dropdown {
   display: none;
   border: 1px solid #ccc;
+  border-top: none;
   position: absolute;
   width: 100%;
   background: #fff;
   z-index: 999;
   max-height: 200px;
   overflow-y: auto;
-  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 26px 26px;
 }
 .equipment .custom-select-wrapper.open .custom-select-dropdown {
@@ -2205,10 +2210,10 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 20px 42px;
+}
+.equipment_card .card_left {
+  margin: 0 auto 0 20px;
 }
 .equipment_card .card_left h3 {
   color: #4C5865;
@@ -2234,12 +2239,21 @@ ul {
   gap: 13px 0;
 }
 .equipment_card .card_left li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #4C5865;
   font-family: "Open Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 150% */
+}
+.equipment_card .card_left li .img_box {
+  width: 35px;
 }
 .equipment_card .card_right {
   display: -webkit-box;
@@ -2434,6 +2448,19 @@ ul {
 }
 .contact .contact_map .map_wrapper {
   position: relative;
+  z-index: 1;
+}
+.contact .contact_map .map_wrapper .map_overlay_effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(211, 211, 211, 0.6), rgba(128, 128, 128, 0.3));
+  background-size: 159.583% 230.649%;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 2;
 }
 .contact .contact_map .map_wrapper .map {
   width: 100%;
@@ -2669,6 +2696,13 @@ ul {
     max-width: 720px;
     margin: 18px auto;
   }
+  .header_menus a.active {
+    color: #FF8743;
+    font-weight: 700;
+  }
+  .header_menus a:hover {
+    opacity: 1;
+  }
   .header_menus .last_li {
     width: 100%;
     display: -webkit-box;
@@ -2765,6 +2799,9 @@ ul {
   }
   .header_menus {
     max-width: 540px;
+  }
+  .equipment_card .card_left {
+    margin: 0;
   }
 }
 @media (max-width: 576px) {
@@ -2967,10 +3004,11 @@ ul {
     text-align: center;
   }
   .hero {
-    height: 430px;
-    background: url("../images/hero_banner_mobile.png");
+    height: 480px;
+    background: url(../images/hero_banner_mobile.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% auto;
+    background-position-y: 109px;
   }
   .hero_block {
     margin-top: 20px;
@@ -3051,7 +3089,7 @@ ul {
     left: 0;
     z-index: 0;
     width: 100%;
-    height: 243px;
+    height: 380px;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(23.92%, #161616), color-stop(38.23%, rgba(22, 22, 22, 0.9)), color-stop(54.37%, rgba(22, 22, 22, 0.7)), color-stop(74.13%, rgba(22, 22, 22, 0.4)), to(rgba(22, 22, 22, 0)));
     background: linear-gradient(180deg, #161616 23.92%, rgba(22, 22, 22, 0.9) 38.23%, rgba(22, 22, 22, 0.7) 54.37%, rgba(22, 22, 22, 0.4) 74.13%, rgba(22, 22, 22, 0) 100%);
   }
@@ -3469,6 +3507,9 @@ ul {
   .accordion {
     display: block;
   }
+  .equipment {
+    padding-top: 20px;
+  }
   .equipment h2 {
     font-size: 26px;
     margin-bottom: 20px;
@@ -3484,6 +3525,7 @@ ul {
   }
   .equipment_card {
     padding: 24px 20px 19px;
+    background-image: url("../images/equipment_card_bg1.png");
     gap: 0;
   }
   .equipment_card .card_img {
@@ -3584,7 +3626,7 @@ ul {
     padding: 0 0 2px;
   }
   .contact .contact_map .map_wrapper {
-    height: 329px;
+    height: 229px;
     width: 100%;
   }
   .contact .contact_map .map_wrapper .map {
@@ -3601,6 +3643,9 @@ ul {
     position: static;
     width: 100%;
     background: #4C5865;
+  }
+  .contact .contact_card ul {
+    margin-bottom: 18px;
   }
   .contact .contact_card .logo {
     -webkit-box-pack: start;
