@@ -189,14 +189,14 @@ html {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+// html {
+//   scroll-behavior: smooth;
+// }
 
 body {
   font-family: "TT Travels";
   background: #fff;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 
   &.no_scroll {
     overflow: hidden;
@@ -228,7 +228,9 @@ ul {
 
   &.trade {
     overflow: hidden;
-
+    .container{
+      padding: 0;
+    }
     .trade_text {
       margin: 0;
     }
@@ -268,7 +270,7 @@ ul {
 
     &.active {
       .trade_text {
-        margin-bottom: 208px;
+        margin-bottom: 255px;
       }
 
       .card_mobile_bg {
@@ -315,7 +317,9 @@ ul {
 
     &.card2 {
       overflow: hidden;
-
+      ul{
+        margin-bottom: 29px;
+      }
       &::before {
         content: "";
         background: linear-gradient(331deg, rgba(63, 78, 88, 0.00) 3.6%, #35444E 59.27%);

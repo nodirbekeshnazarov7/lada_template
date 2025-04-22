@@ -1,5 +1,6 @@
 $(document).ready(function () {
   // accordion
+ 
   $('.accordion-header').on('click', function () {
     const $item = $(this).closest('.accordion-item');
     const $content = $item.find('.accordion-content');
@@ -21,7 +22,7 @@ $(document).ready(function () {
       $content.stop(true, true).slideDown();
     }
   });
-  
+  $('.accordion-header').eq(0).trigger('click');
 
 
 
@@ -320,6 +321,27 @@ var creditSwiper = new Swiper(".credit_swiper", {
         $(".header_menus_wrapper").removeClass("active");
         $('body').removeClass('no_scroll');
     });
+
+    $(".menu_item a").on("click", function (e) {
+      e.preventDefault();
+      $(".menu_item a").removeClass('active');
+      $(this).addClass('active');
+      const target = $(this).attr("href").replace('#', '');
+      const isMobile = window.innerWidth <= 992;
+      let sectionId = isMobile ? `#${target}-mobile` : `#${target}-desktop`;
+      let $targetEl = $(sectionId);
+      if (!$targetEl.length) {
+        sectionId = `#${target}`;
+        $targetEl = $(sectionId);
+      }
+      if ($targetEl.length) {
+        $("html, body").animate({
+          scrollTop: $targetEl.offset().top
+        }, 500);
+      }
+    });
+    
+    
 
     /** -------------------------------
      *  CUSTOM SELECT

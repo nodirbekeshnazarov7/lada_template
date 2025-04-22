@@ -15,6 +15,21 @@
         position: relative;
         .map_wrapper{
             position: relative;
+            z-index: 1;
+            .map_overlay_effect {
+                // display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, rgba(211, 211, 211, 0.6), rgba(128, 128, 128, 0.3));
+                // background-position: -342px -275.149px;
+                background-size: 159.583% 230.649%;
+                background-repeat: no-repeat;
+                pointer-events: none;
+                z-index: 2;
+              }
             .map{
                 width: 100%;
                 height: 399px;
